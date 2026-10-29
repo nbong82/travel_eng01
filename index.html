@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>여행영어 실전 대사집 - 롤플레이 학습</title>
+  <title>여행영어 실전 대사집 - 스피킹 롤플레이 학습</title>
   <style>
     :root {
       --bg: #f8fafc;
@@ -22,6 +22,8 @@
       --note-border: #fde68a;
       --note-text: #92400e;
       --active-ring: #3b82f6;
+      --success: #16a34a;
+      --success-bg: #dcfce7;
     }
 
     * {
@@ -43,7 +45,7 @@
       margin: 0 auto;
     }
 
-    /* Navigation Bar (Dropdown + Prev/Next) */
+    /* Navigation Bar */
     .nav-bar {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -216,6 +218,11 @@
       box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
     }
 
+    .card.success-card {
+      border-color: var(--success);
+      background: #f0fdf4;
+    }
+
     .card-header {
       padding: 16px 20px;
       display: flex;
@@ -236,6 +243,7 @@
       align-items: center;
       gap: 12px;
       flex: 1;
+      flex-wrap: wrap;
     }
 
     .toggle-icon {
@@ -274,6 +282,38 @@
       font-size: 1.05rem;
       font-weight: 700;
       color: var(--text-main);
+    }
+
+    /* 한글 영역 바로 옆에 위치한 말하기 버튼 */
+    .speak-practice-btn {
+      border: 1px solid #fbcfe8;
+      background: #fdf2f8;
+      color: #db2777;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+
+    .speak-practice-btn:hover {
+      background: #db2777;
+      color: #ffffff;
+    }
+
+    .speak-practice-btn.listening {
+      background: #dc2626;
+      color: #ffffff;
+      border-color: #dc2626;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
 
     .page-badge {
@@ -317,7 +357,7 @@
       letter-spacing: -0.01em;
     }
 
-    .speak-btn {
+    .speak-audio-btn {
       border: 1px solid #cbd5e1;
       background: #ffffff;
       color: var(--text-main);
@@ -330,10 +370,31 @@
       flex-shrink: 0;
     }
 
-    .speak-btn:hover {
+    .speak-audio-btn:hover {
       background: var(--primary);
       color: #ffffff;
       border-color: var(--primary);
+    }
+
+    .feedback-box {
+      margin-top: 8px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: none;
+    }
+
+    .feedback-success {
+      background: var(--success-bg);
+      color: var(--success);
+      border: 1px solid #bbf7d0;
+    }
+
+    .feedback-retry {
+      background: #fef2f2;
+      color: #dc2626;
+      border: 1px solid #fecaca;
     }
 
     .note-box {
@@ -442,7 +503,6 @@
 </head>
 <body>
   <div class="container">
-    <!-- 상단 드롭다운 & 이전/다음 이동 바 -->
     <div class="nav-bar">
       <select id="situationSelect" class="situation-select" onchange="selectSituationByIndex(this.value)"></select>
       <div class="nav-btns">
@@ -457,7 +517,7 @@
         <span id="voiceStatus" class="voice-status">음성 엔진 준비 중...</span>
       </div>
       <h1 id="situationTitle">로딩 중...</h1>
-      <p class="subtitle">한글 문장을 보고 먼저 영어로 말해본 뒤, 카드를 눌러 영어 문장과 원어민 발음을 확인하세요.</p>
+      <p class="subtitle">한글 뜻을 보고 <strong>[말하기 🎤]</strong> 버튼을 눌러 영어로 말해보세요! 정답을 맞히면 카드가 자동으로 열립니다.</p>
     </header>
 
     <div class="controls">
@@ -471,10 +531,8 @@
     <div id="dialogueContainer" class="dialogue-list"></div>
   </div>
 
-  <!-- 외부 데이터 파일 불러오기 -->
   <script src="data.js"></script>
 
-  <!-- 앱 동작 스크립트 (수정 불필요) -->
   <script>
     let currentIndex = 0;
     let femaleVoice = null;
@@ -486,14 +544,12 @@
       if (typeof situationsData === "undefined" || !Array.isArray(situationsData) || situationsData.length === 0) {
         document.getElementById("dialogueContainer").innerHTML = `
           <div class="empty-notice">
-            <p style="font-weight:700; font-size:1.05rem;">⚠️ data.js 파일을 찾을 수 없거나 데이터가 비어 있습니다.</p>
-            <p style="font-size:0.9rem; margin-top:6px;">index.html과 같은 폴더에 data.js 파일이 있는지 확인해 주세요.</p>
+            <p style="font-weight:700; font-size:1.05rem;">⚠️ data.js 파일이 필요합니다.</p>
           </div>
         `;
         return;
       }
 
-      // 마지막으로 학습한 상황 ID 복원
       const savedId = Number(localStorage.getItem("lastSituationId"));
       const foundIdx = situationsData.findIndex(item => item.id === savedId);
       currentIndex = foundIdx !== -1 ? foundIdx : 0;
@@ -520,9 +576,7 @@
       if (!currentItem) return;
 
       localStorage.setItem("lastSituationId", currentItem.id);
-
-      const selectEl = document.getElementById("situationSelect");
-      selectEl.value = currentIndex;
+      document.getElementById("situationSelect").value = currentIndex;
 
       const numStr = String(currentItem.id).padStart(2, "0");
       const pageInfo = currentItem.page ? ` · ${currentItem.page}` : "";
@@ -546,33 +600,17 @@
       }
     }
 
-function loadVoices() {
+    function loadVoices() {
       const voices = window.speechSynthesis.getVoices();
       const enVoices = voices.filter(v => v.lang.startsWith("en"));
 
-      // 1. 여성 목소리 선택 (또렷한 미국/영국 고품질 음성 우선 검색)
-      femaleVoice =
-        enVoices.find(v => /Google US English|Google UK English Female|Aria|Jenny|Samantha|Zira/i.test(v.name)) ||
-        enVoices[0] ||
-        null;
-
-      // 2. 남성 목소리 선택 (발음이 명확하고 또렷한 Google 또는 시스템 음성 우선 검색)
-      // 영국식(UK) 대신 더 명확한 발음의 US(미국식) 남성 고품질 음성(Google 등)을 우선 찾도록 변경했습니다.
-      maleVoice =
-        enVoices.find(v => /Google US English|Google UK English Male|David|Guy|Christopher|Alex/i.test(v.name)) ||
-        enVoices.find(v => v.lang.includes("en-US")) || // 미국식 영어가 발음이 더 또렷한 경우가 많습니다.
-        enVoices[1] ||
-        enVoices[0] ||
-        null;
+      femaleVoice = enVoices.find(v => /Google US English|Aria|Jenny|Samantha|Zira/i.test(v.name)) || enVoices[0] || null;
+      maleVoice = enVoices.find(v => /Google US English|David|Guy|Christopher|Alex/i.test(v.name)) || enVoices[1] || enVoices[0] || null;
 
       const statusEl = document.getElementById("voiceStatus");
-      if (enVoices.length > 0) {
-        statusEl.textContent = `음성 준비 완료 (${enVoices.length}개 영어 음성 감지)`;
-      } else {
-        statusEl.textContent = "기본 브라우저 음성 사용";
-      }
+      statusEl.textContent = enVoices.length > 0 ? `음성 준비 완료` : `기본 브라우저 음성 사용`;
     }
-    
+
     if ("speechSynthesis" in window) {
       window.speechSynthesis.onvoiceschanged = loadVoices;
       loadVoices();
@@ -585,13 +623,7 @@ function loadVoices() {
       if (!dialogues || dialogues.length === 0) {
         container.innerHTML = `
           <div class="empty-notice">
-            <p style="font-size:1.05rem; font-weight:700; margin-bottom:8px;">
-              📌 ${situationItem.id}번 상황(${situationItem.title})의 대사 데이터가 아직 비어 있습니다.
-            </p>
-            <p style="font-size:0.9rem;">
-              채팅창에 <strong>"${situationItem.id}번부터 데이터 뽑아줘"</strong>라고 요청하셔서<br/>
-              <code>data.js</code>에 붙여넣으시면 바로 활성화됩니다!
-            </p>
+            <p style="font-size:1.05rem; font-weight:700;">📌 ${situationItem.id}번 상황의 대사 데이터가 비어 있습니다.</p>
           </div>
         `;
         return;
@@ -617,9 +649,7 @@ function loadVoices() {
           `
           : "";
 
-        const noteHtml = item.note
-          ? `<div class="note-box">${item.note}</div>`
-          : "";
+        const noteHtml = item.note ? `<div class="note-box">${item.note}</div>` : "";
 
         return `
           <div class="card" id="card-${idx}">
@@ -628,15 +658,16 @@ function loadVoices() {
                 <span class="toggle-icon">▶</span>
                 <span class="role-badge role-${item.role}">${item.roleLabel}</span>
                 <span class="kr-text">${item.kr}</span>
+                <!-- 한글 문장 바로 옆에 위치한 말하기 채점 버튼 -->
+                <button class="speak-practice-btn" id="speak-btn-${idx}" onclick="event.stopPropagation(); startSpeechTest(${idx}, '${item.en.replace(/'/g, "\\'")}')">말하기 🎤</button>
               </div>
               <span class="page-badge">📖 ${item.page || situationItem.page || ""}</span>
             </div>
             <div class="card-body">
+              <div class="feedback-box" id="feedback-${idx}"></div>
               <div class="en-box">
                 <span class="en-text">${item.en}</span>
-                <button class="speak-btn" onclick="event.stopPropagation(); speakSentence('${item.en.replace(/'/g, "\\'")}', '${item.role}')">
-                  🔊 발음 듣기
-                </button>
+                <button class="speak-audio-btn" onclick="event.stopPropagation(); speakSentence('${item.en.replace(/'/g, "\\'")}', '${item.role}')">🔊 발음 듣기</button>
               </div>
               ${noteHtml}
               ${extrasHtml}
@@ -681,6 +712,66 @@ function loadVoices() {
       }
 
       window.speechSynthesis.speak(utter);
+    }
+
+    // 🎤 한글 옆 '말하기' 버튼 눌렀을 때 작동하는 음성 인식 및 검증 로직
+    function startSpeechTest(idx, targetText) {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        alert("이 브라우저는 음성 인식을 지원하지 않습니다. 구글 크롬(Chrome)을 사용해 주세요.");
+        return;
+      }
+
+      const speakBtn = document.getElementById(`speak-btn-${idx}`);
+      const card = document.getElementById(`card-${idx}`);
+      const feedbackBox = document.getElementById(`feedback-${idx}`);
+
+      speakBtn.classList.add("listening");
+      speakBtn.textContent = "🎙️ 듣는 중...";
+
+      const recognition = new SpeechRecognition();
+      recognition.lang = "en-US";
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.onresult = function(event) {
+        const spoken = event.results[0][0].transcript;
+        const cleanTarget = targetText.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
+        const cleanSpoken = spoken.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
+
+        speakBtn.classList.remove("listening");
+        speakBtn.textContent = "말하기 🎤";
+
+        feedbackBox.style.display = "block";
+
+        if (cleanTarget === cleanSpoken || cleanTarget.includes(cleanSpoken) || cleanSpoken.includes(cleanTarget)) {
+          // 정답 맞힘: 카드 자동 오픈 및 초록색 성공 디자인 적용
+          feedbackBox.className = "feedback-box feedback-success";
+          feedbackBox.innerHTML = `🎉 완벽합니다! (인식된 단어: "${spoken}")`;
+          card.classList.add("open", "success-card");
+        } else {
+          // 오답: 피드백 및 카드 오픈하여 정답 대조 유도
+          feedbackBox.className = "feedback-box feedback-retry";
+          feedbackBox.innerHTML = `💪 조금 다릅니다! 내 발음: "${spoken}" (카드를 열어 정답을 확인해보세요)`;
+          card.classList.add("open");
+          card.classList.remove("success-card");
+        }
+      };
+
+      recognition.onerror = function(event) {
+        speakBtn.classList.remove("listening");
+        speakBtn.textContent = "말하기 🎤";
+        feedbackBox.style.display = "block";
+        feedbackBox.className = "feedback-box feedback-retry";
+        feedbackBox.textContent = "음성 인식을 실패했습니다. 마이크 권한을 확인하고 다시 시도해 주세요.";
+      };
+
+      recognition.onend = function() {
+        speakBtn.classList.remove("listening");
+        speakBtn.textContent = "말하기 🎤";
+      };
+
+      recognition.start();
     }
 
     function togglePlayAll() {
