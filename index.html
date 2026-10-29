@@ -546,17 +546,21 @@
       }
     }
 
-    function loadVoices() {
+function loadVoices() {
       const voices = window.speechSynthesis.getVoices();
       const enVoices = voices.filter(v => v.lang.startsWith("en"));
 
+      // 1. 여성 목소리 선택 (또렷한 미국/영국 고품질 음성 우선 검색)
       femaleVoice =
-        enVoices.find(v => /Samantha|Zira|Victoria|Google US English|Aria|Jenny/i.test(v.name)) ||
+        enVoices.find(v => /Google US English|Google UK English Female|Aria|Jenny|Samantha|Zira/i.test(v.name)) ||
         enVoices[0] ||
         null;
 
+      // 2. 남성 목소리 선택 (발음이 명확하고 또렷한 Google 또는 시스템 음성 우선 검색)
+      // 영국식(UK) 대신 더 명확한 발음의 US(미국식) 남성 고품질 음성(Google 등)을 우선 찾도록 변경했습니다.
       maleVoice =
-        enVoices.find(v => /Alex|David|Daniel|Google UK English Male|Guy|Christopher/i.test(v.name)) ||
+        enVoices.find(v => /Google US English|Google UK English Male|David|Guy|Christopher|Alex/i.test(v.name)) ||
+        enVoices.find(v => v.lang.includes("en-US")) || // 미국식 영어가 발음이 더 또렷한 경우가 많습니다.
         enVoices[1] ||
         enVoices[0] ||
         null;
@@ -568,7 +572,7 @@
         statusEl.textContent = "기본 브라우저 음성 사용";
       }
     }
-
+    
     if ("speechSynthesis" in window) {
       window.speechSynthesis.onvoiceschanged = loadVoices;
       loadVoices();
