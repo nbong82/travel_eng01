@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>여행영어 실전 대사집 - 롤플레이 학습</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-sub: #475569;
+      --border: #e2e8f0;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --role-a-bg: #fce7f3;
+      --role-a-text: #be185d;
+      --role-b-bg: #dbeafe;
+      --role-b-text: #1d4ed8;
+      --en-bg: #f1f5f9;
+      --note-bg: #fffbeb;
+      --note-border: #fde68a;
+      --note-text: #92400e;
+      --active-ring: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 20px 14px 60px;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* Navigation Bar (Dropdown + Prev/Next) */
+    .nav-bar {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+    }
+
+    .situation-select {
+      flex: 1;
+      min-width: 220px;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .situation-select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    .nav-btns {
+      display: flex;
+      gap: 6px;
+    }
+
+    .nav-btn {
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text-main);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .nav-btn:hover:not(:disabled) {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* Header */
+    header {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .category-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: #eff6ff;
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid #bfdbfe;
+    }
+
+    .voice-status {
+      font-size: 0.78rem;
+      color: var(--text-sub);
+      background: #f1f5f9;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      color: var(--text-main);
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn:hover {
+      background: #f1f5f9;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn-primary.playing {
+      background: #dc2626;
+      border-color: #dc2626;
+    }
+
+    /* Dialogue Cards */
+    .dialogue-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+    }
+
+    .card.active-play {
+      border-color: var(--active-ring);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+
+    .card-header {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s ease;
+    }
+
+    .card-header:hover {
+      background: #f8fafc;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .toggle-icon {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+      width: 20px;
+      text-align: center;
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .card.open .toggle-icon {
+      transform: rotate(90deg);
+      color: var(--primary);
+    }
+
+    .role-badge {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .role-A {
+      background: var(--role-a-bg);
+      color: var(--role-a-text);
+    }
+
+    .role-B {
+      background: var(--role-b-bg);
+      color: var(--role-b-text);
+    }
+
+    .kr-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .page-badge {
+      font-size: 0.76rem;
+      color: #64748b;
+      background: #f1f5f9;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    /* Card Body */
+    .card-body {
+      display: none;
+      padding: 0 20px 18px 52px;
+      border-top: 1px dashed var(--border);
+      background: #fcfdff;
+    }
+
+    .card.open .card-body {
+      display: block;
+    }
+
+    .en-box {
+      margin-top: 14px;
+      background: var(--en-bg);
+      padding: 14px 16px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .en-text {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #1e293b;
+      letter-spacing: -0.01em;
+    }
+
+    .speak-btn {
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+
+    .speak-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .note-box {
+      margin-top: 10px;
+      background: var(--note-bg);
+      border: 1px solid var(--note-border);
+      color: var(--note-text);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .extras-section {
+      margin-top: 12px;
+    }
+
+    .extras-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-sub);
+      margin-bottom: 6px;
+    }
+
+    .extras-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .extra-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    .extra-texts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: baseline;
+    }
+
+    .extra-en {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .extra-kr {
+      color: var(--text-sub);
+      font-size: 0.85rem;
+    }
+
+    .mini-speak-btn {
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      color: var(--text-main);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .mini-speak-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .empty-notice {
+      background: #ffffff;
+      border: 1px dashed #cbd5e1;
+      border-radius: 14px;
+      padding: 36px 20px;
+      text-align: center;
+      color: var(--text-sub);
+    }
+
+    @media (max-width: 600px) {
+      .card-body {
+        padding: 0 16px 16px 16px;
+      }
+      .en-text {
+        font-size: 1.05rem;
+      }
+      .nav-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .nav-btns {
+        justify-content: space-between;
+      }
+      .nav-btn {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 상단 드롭다운 & 이전/다음 이동 바 -->
+    <div class="nav-bar">
+      <select id="situationSelect" class="situation-select" onchange="selectSituationByIndex(this.value)"></select>
+      <div class="nav-btns">
+        <button id="prevBtn" class="nav-btn" onclick="moveSituation(-1)">◀ 이전 상황</button>
+        <button id="nextBtn" class="nav-btn" onclick="moveSituation(1)">다음 상황 ▶</button>
+      </div>
+    </div>
+
+    <header>
+      <div class="header-top">
+        <span id="categoryBadge" class="category-badge">TRAVEL ENGLISH</span>
+        <span id="voiceStatus" class="voice-status">음성 엔진 준비 중...</span>
+      </div>
+      <h1 id="situationTitle">로딩 중...</h1>
+      <p class="subtitle">한글 문장을 보고 먼저 영어로 말해본 뒤, 카드를 눌러 영어 문장과 원어민 발음을 확인하세요.</p>
+    </header>
+
+    <div class="controls">
+      <button id="playAllBtn" class="btn btn-primary" onclick="togglePlayAll()">
+        ▶ 대화 전체 연속 듣기 (여성 A / 남성 B)
+      </button>
+      <button class="btn" onclick="expandAll()">전체 펼치기</button>
+      <button class="btn" onclick="collapseAll()">전체 접기</button>
+    </div>
+
+    <div id="dialogueContainer" class="dialogue-list"></div>
+  </div>
+
+  <!-- 외부 데이터 파일 불러오기 -->
+  <script src="data.js"></script>
+
+  <!-- 앱 동작 스크립트 (수정 불필요) -->
+  <script>
+    let currentIndex = 0;
+    let femaleVoice = null;
+    let maleVoice = null;
+    let isPlayingAll = false;
+    let currentPlayIndex = 0;
+
+    function initApp() {
+      if (typeof situationsData === "undefined" || !Array.isArray(situationsData) || situationsData.length === 0) {
+        document.getElementById("dialogueContainer").innerHTML = `
+          <div class="empty-notice">
+            <p style="font-weight:700; font-size:1.05rem;">⚠️ data.js 파일을 찾을 수 없거나 데이터가 비어 있습니다.</p>
+            <p style="font-size:0.9rem; margin-top:6px;">index.html과 같은 폴더에 data.js 파일이 있는지 확인해 주세요.</p>
+          </div>
+        `;
+        return;
+      }
+
+      // 마지막으로 학습한 상황 ID 복원
+      const savedId = Number(localStorage.getItem("lastSituationId"));
+      const foundIdx = situationsData.findIndex(item => item.id === savedId);
+      currentIndex = foundIdx !== -1 ? foundIdx : 0;
+
+      initDropdown();
+      selectSituationByIndex(currentIndex);
+    }
+
+    function initDropdown() {
+      const selectEl = document.getElementById("situationSelect");
+      selectEl.innerHTML = situationsData.map((item, idx) => {
+        const numStr = String(item.id).padStart(2, "0");
+        const hasDialogues = item.dialogues && item.dialogues.length > 0;
+        const statusText = hasDialogues ? "" : " (대사 추가 예정)";
+        return `<option value="${idx}">${numStr}. [${item.category}] ${item.title}${statusText}</option>`;
+      }).join("");
+      selectEl.value = currentIndex;
+    }
+
+    function selectSituationByIndex(index) {
+      stopPlayAll();
+      currentIndex = Number(index);
+      const currentItem = situationsData[currentIndex];
+      if (!currentItem) return;
+
+      localStorage.setItem("lastSituationId", currentItem.id);
+
+      const selectEl = document.getElementById("situationSelect");
+      selectEl.value = currentIndex;
+
+      const numStr = String(currentItem.id).padStart(2, "0");
+      const pageInfo = currentItem.page ? ` · ${currentItem.page}` : "";
+
+      document.getElementById("categoryBadge").textContent =
+        `TRAVEL ENGLISH · SITUATION ${numStr} (${currentItem.category}${pageInfo})`;
+      document.getElementById("situationTitle").textContent =
+        `${numStr}. ${currentItem.title}`;
+
+      document.getElementById("prevBtn").disabled = currentIndex <= 0;
+      document.getElementById("nextBtn").disabled = currentIndex >= situationsData.length - 1;
+
+      renderDialogues(currentItem);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function moveSituation(delta) {
+      const nextIdx = currentIndex + delta;
+      if (nextIdx >= 0 && nextIdx < situationsData.length) {
+        selectSituationByIndex(nextIdx);
+      }
+    }
+
+    function loadVoices() {
+      const voices = window.speechSynthesis.getVoices();
+      const enVoices = voices.filter(v => v.lang.startsWith("en"));
+
+      femaleVoice =
+        enVoices.find(v => /Samantha|Zira|Victoria|Google US English|Aria|Jenny/i.test(v.name)) ||
+        enVoices[0] ||
+        null;
+
+      maleVoice =
+        enVoices.find(v => /Alex|David|Daniel|Google UK English Male|Guy|Christopher/i.test(v.name)) ||
+        enVoices[1] ||
+        enVoices[0] ||
+        null;
+
+      const statusEl = document.getElementById("voiceStatus");
+      if (enVoices.length > 0) {
+        statusEl.textContent = `음성 준비 완료 (${enVoices.length}개 영어 음성 감지)`;
+      } else {
+        statusEl.textContent = "기본 브라우저 음성 사용";
+      }
+    }
+
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+      loadVoices();
+    }
+
+    function renderDialogues(situationItem) {
+      const container = document.getElementById("dialogueContainer");
+      const dialogues = situationItem.dialogues;
+
+      if (!dialogues || dialogues.length === 0) {
+        container.innerHTML = `
+          <div class="empty-notice">
+            <p style="font-size:1.05rem; font-weight:700; margin-bottom:8px;">
+              📌 ${situationItem.id}번 상황(${situationItem.title})의 대사 데이터가 아직 비어 있습니다.
+            </p>
+            <p style="font-size:0.9rem;">
+              채팅창에 <strong>"${situationItem.id}번부터 데이터 뽑아줘"</strong>라고 요청하셔서<br/>
+              <code>data.js</code>에 붙여넣으시면 바로 활성화됩니다!
+            </p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = dialogues.map((item, idx) => {
+        const extrasHtml = item.extras && item.extras.length > 0
+          ? `
+            <div class="extras-section">
+              <div class="extras-title">➕ 함께 익히면 좋은 추가 표현</div>
+              <div class="extras-list">
+                ${item.extras.map(ex => `
+                  <div class="extra-item">
+                    <div class="extra-texts">
+                      <span class="extra-en">${ex.en}</span>
+                      <span class="extra-kr">${ex.kr}</span>
+                    </div>
+                    <button class="mini-speak-btn" onclick="event.stopPropagation(); speakSentence('${ex.en.replace(/'/g, "\\'")}', '${item.role}')">🔊 듣기</button>
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+          `
+          : "";
+
+        const noteHtml = item.note
+          ? `<div class="note-box">${item.note}</div>`
+          : "";
+
+        return `
+          <div class="card" id="card-${idx}">
+            <div class="card-header" onclick="toggleCard(${idx})">
+              <div class="header-left">
+                <span class="toggle-icon">▶</span>
+                <span class="role-badge role-${item.role}">${item.roleLabel}</span>
+                <span class="kr-text">${item.kr}</span>
+              </div>
+              <span class="page-badge">📖 ${item.page || situationItem.page || ""}</span>
+            </div>
+            <div class="card-body">
+              <div class="en-box">
+                <span class="en-text">${item.en}</span>
+                <button class="speak-btn" onclick="event.stopPropagation(); speakSentence('${item.en.replace(/'/g, "\\'")}', '${item.role}')">
+                  🔊 발음 듣기
+                </button>
+              </div>
+              ${noteHtml}
+              ${extrasHtml}
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function toggleCard(index) {
+      const card = document.getElementById(`card-${index}`);
+      if (card) card.classList.toggle("open");
+    }
+
+    function expandAll() {
+      document.querySelectorAll(".card").forEach(c => c.classList.add("open"));
+    }
+
+    function collapseAll() {
+      document.querySelectorAll(".card").forEach(c => c.classList.remove("open"));
+    }
+
+    function speakSentence(text, role = "A", onEndCallback = null) {
+      if (!("speechSynthesis" in window)) return;
+      window.speechSynthesis.cancel();
+
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = "en-US";
+      utter.rate = 0.95;
+
+      if (role === "A") {
+        if (femaleVoice) utter.voice = femaleVoice;
+        utter.pitch = 1.15;
+      } else {
+        if (maleVoice) utter.voice = maleVoice;
+        utter.pitch = 0.85;
+      }
+
+      if (onEndCallback) {
+        utter.onend = onEndCallback;
+        utter.onerror = onEndCallback;
+      }
+
+      window.speechSynthesis.speak(utter);
+    }
+
+    function togglePlayAll() {
+      const currentItem = situationsData[currentIndex];
+      const dialogues = currentItem ? currentItem.dialogues : [];
+      if (!dialogues || dialogues.length === 0) return;
+
+      const btn = document.getElementById("playAllBtn");
+      if (isPlayingAll) {
+        stopPlayAll();
+        return;
+      }
+
+      isPlayingAll = true;
+      currentPlayIndex = 0;
+      btn.classList.add("playing");
+      btn.textContent = "⏹ 연속 듣기 정지";
+      playNextInSequence();
+    }
+
+    function stopPlayAll() {
+      isPlayingAll = false;
+      if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+      const btn = document.getElementById("playAllBtn");
+      if (btn) {
+        btn.classList.remove("playing");
+        btn.textContent = "▶ 대화 전체 연속 듣기 (여성 A / 남성 B)";
+      }
+      document.querySelectorAll(".card").forEach(c => c.classList.remove("active-play"));
+    }
+
+    function playNextInSequence() {
+      const currentItem = situationsData[currentIndex];
+      const dialogues = currentItem ? currentItem.dialogues : [];
+      if (!isPlayingAll || !dialogues || currentPlayIndex >= dialogues.length) {
+        stopPlayAll();
+        return;
+      }
+
+      document.querySelectorAll(".card").forEach(c => c.classList.remove("active-play"));
+      const currentCard = document.getElementById(`card-${currentPlayIndex}`);
+      if (currentCard) {
+        currentCard.classList.add("open", "active-play");
+        currentCard.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      const item = dialogues[currentPlayIndex];
+      speakSentence(item.en, item.role, () => {
+        if (!isPlayingAll) return;
+        currentPlayIndex++;
+        setTimeout(playNextInSequence, 500);
+      });
+    }
+
+    initApp();
+  </script>
+</body>
+</html>
