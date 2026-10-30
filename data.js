@@ -2,7 +2,7 @@
 // 여행영어 실전 대사집 데이터 파일 (data.js) - 1번 ~ 50번 전체 원문 완벽 수록
 // ============================================================================
 
-const situationsData = [
+const lectures = [
   {
     id: 1,
     title: "조식은 몇 시부터예요?",
@@ -1744,6 +1744,1027 @@ const situationsData = [
       { kr: "이것도 저희에게 청구되나요?", en: "Will we be charged for this?" },
       { kr: "이 항목을 계산서에서 빼 주시겠어요?", en: "Could you take this off the bill?" },
       { kr: "바로잡아 주셔서 감사합니다.", en: "Thank you for sorting it out." }
+    ]
+  },
+  // --- SITUATION 51 ---
+  {
+    day: 51,
+    dayFormatted: "DAY 051",
+    title: "외국인이 저보고 어려보인대요 (엘리베이터 스몰토크)",
+    dialogues: [
+      {
+        id: "d51_1",
+        role: "B",
+        roleLabel: "현지인 (남성)",
+        kr: "내려가세요?",
+        en: "Going down?",
+        time: "00:01",
+        seconds: 1,
+        note: "Going down? / Going up? : 엘리베이터에서 내려가는지/올라가는지 묻는 표현",
+        extras: [
+          { en: "Going up.", kr: "올라가요." }
+        ]
+      },
+      {
+        id: "d51_2",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "네. 로비 눌러주세요.",
+        en: "Yes. Lobby, please.",
+        time: "00:03",
+        seconds: 3,
+        note: "Lobby, please : 로비 층 부탁드립니다",
+        extras: []
+      },
+      {
+        id: "d51_3",
+        role: "B",
+        roleLabel: "현지인 (남성)",
+        kr: "여행 오셨어요?",
+        en: "Are you here on vacation?",
+        time: "00:05",
+        seconds: 5,
+        note: "Are you here on vacation? : 여행(휴가)차 오셨나요? (스몰토크 단골 질문)",
+        extras: [
+          { en: "I'm here on business.", kr: "업무차 출장 왔어요." }
+        ]
+      },
+      {
+        id: "d51_4",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "네, 여행 왔어요. 한국에서요.",
+        en: "Yes, we’re here on vacation. From Korea.",
+        time: "00:08",
+        seconds: 8,
+        note: "From Korea : 한국에서 왔어요",
+        extras: [
+          { en: "I’m from Korea. How about you?", kr: "한국에서 왔어요. 그쪽은요?" }
+        ]
+      },
+      {
+        id: "d51_5",
+        role: "B",
+        roleLabel: "현지인 (남성)",
+        kr: "한국이요! 멋지네요. 얼마나 머무세요?",
+        en: "Korea! That’s wonderful. How long are you staying?",
+        time: "00:11",
+        seconds: 11,
+        note: "How long are you staying? : 얼마나 머무르시나요?",
+        extras: [
+          { en: "How long are you in town?", kr: "여기 얼마나 계세요?" }
+        ]
+      },
+      {
+        id: "d51_6",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "일주일이요.",
+        en: "One week.",
+        time: "00:14",
+        seconds: 14,
+        note: "We're here for a week : 일주일 동안 머물러요",
+        extras: []
+      },
+      {
+        id: "d51_7",
+        role: "B",
+        roleLabel: "현지인 (남성)",
+        kr: "잘 고르셨어요. 이 도시는 가을에 정말 예뻐요.",
+        en: "Good choice. This city is beautiful in the fall.",
+        time: "00:16",
+        seconds: 16,
+        note: "in the fall : 가을에",
+        extras: []
+      },
+      {
+        id: "d51_8",
+        role: "B",
+        roleLabel: "현지인 (남성)",
+        kr: "잠깐만요. 두 분 대학생이에요?",
+        en: "Wait. Are you two college students?",
+        time: "00:19",
+        seconds: 19,
+        note: "college students : 대학생들",
+        extras: []
+      },
+      {
+        id: "d51_9",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "얘 곧 서른이에요.",
+        en: "She’s almost thirty.",
+        time: "00:22",
+        seconds: 22,
+        note: "almost thirty : 곧 서른 살인",
+        extras: []
+      },
+      {
+        id: "d51_10",
+        role: "B",
+        roleLabel: "현지인 (남성)",
+        kr: "말도 안 돼요. 진짜 어려 보여요.",
+        en: "No way. You look so young.",
+        time: "00:24",
+        seconds: 24,
+        note: "No way : 말도 안 돼 / You look so young : 정말 동안이시네요, 어려 보여요",
+        extras: [
+          { en: "You just made my day.", kr: "덕분에 오늘 하루 기분 최고예요." },
+          { en: "It was nice talking to you.", kr: "이야기 즐거웠어요." }
+        ]
+      },
+      {
+        id: "d51_11",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "감사해요. 한국 스킨케어 덕분인가 봐요.",
+        en: "Thank you. It must be the Korean skincare.",
+        time: "00:28",
+        seconds: 28,
+        note: "It must be ~ : 분명 ~ 덕분일 거예요 / Korean skincare : K-스킨케어",
+        extras: []
+      }
+    ]
+  },
+
+  // --- SITUATION 52 ---
+  {
+    day: 52,
+    dayFormatted: "DAY 052",
+    title: "I'm into you vs I'm onto you (전치사 into와 onto)",
+    dialogues: [
+      {
+        id: "d52_1",
+        role: "B",
+        roleLabel: "상대방 (남성)",
+        kr: "거기 서!",
+        en: "Stop right there!",
+        time: "00:01",
+        seconds: 1,
+        note: "Stop right there : 거기 딱 멈춰 서라",
+        extras: []
+      },
+      {
+        id: "d52_2",
+        role: "A",
+        roleLabel: "화자 (여성)",
+        kr: "너한테 반했어!",
+        en: "I’m INTO you!",
+        time: "00:04",
+        seconds: 4,
+        note: "be into somebody : ~에게 푹 빠지다, 반하다 (말실수 장면)",
+        extras: [
+          { en: "I think he’s into you.", kr: "그 사람 너한테 반한 것 같아." },
+          { en: "What are you into these days?", kr: "너 요즘 뭐에 꽂혀 있어?" }
+        ]
+      },
+      {
+        id: "d52_3",
+        role: "B",
+        roleLabel: "상대방 (남성)",
+        kr: "저한테 반했다고요?",
+        en: "You’re into me?",
+        time: "00:07",
+        seconds: 7,
+        note: "be into me : 나한테 반했다고?",
+        extras: []
+      },
+      {
+        id: "d52_4",
+        role: "A",
+        roleLabel: "화자 (여성)",
+        kr: "온투! O-N! 네 속셈 다 안다고!",
+        en: "ONTO! O-N! I’m ONTO you!",
+        time: "00:10",
+        seconds: 10,
+        note: "be onto somebody : ~의 뒤를 밟다, 수상한 속셈/비밀을 다 눈치채고 있다",
+        extras: [
+          { en: "The police are onto him.", kr: "경찰이 그의 뒤를 쫓고 있어." },
+          { en: "I think they’re onto us.", kr: "저들이 우릴 눈치챈 것 같아." }
+        ]
+      },
+      {
+        id: "d52_5",
+        role: "A",
+        roleLabel: "화자 (여성)",
+        kr: "다시 할게. 네 속셈 다 알아. 그 가방에 뭐가 들었는지 알고 있어.",
+        en: "Let me try again. I’m ONTO you. I know what’s in that briefcase.",
+        time: "00:14",
+        seconds: 14,
+        note: "briefcase : 서류 가방",
+        extras: [
+          { en: "Nice try. I'm onto your tricks.", kr: "어림없지. 네 수법 다 꿰뚫고 있어." }
+        ]
+      },
+      {
+        id: "d52_6",
+        role: "B",
+        roleLabel: "상대방 (남성)",
+        kr: "알았어요, 알았어. 들켰네요.",
+        en: "Okay, okay. You got me.",
+        time: "00:18",
+        seconds: 18,
+        note: "You got me : 내가 졌다, 딱 들켰네",
+        extras: []
+      },
+      {
+        id: "d52_7",
+        role: "B",
+        roleLabel: "상대방 (남성)",
+        kr: "초콜릿이에요. 엄마 생신 선물이요.",
+        en: "It’s chocolate. For my mom’s birthday.",
+        time: "00:21",
+        seconds: 21,
+        note: "mom's birthday : 엄마 생신",
+        extras: []
+      },
+      {
+        id: "d52_8",
+        role: "A",
+        roleLabel: "화자 (여성)",
+        kr: "정말 죄송해요. 사람을 잘못 봤네요.",
+        en: "I’m so sorry. We had the wrong guy.",
+        time: "00:25",
+        seconds: 25,
+        note: "have the wrong guy/person : 사람을 잘못 보다/착각하다",
+        extras: []
+      },
+      {
+        id: "d52_9",
+        role: "B",
+        roleLabel: "상대방 (남성)",
+        kr: "괜찮아요. 초콜릿 드실래요?",
+        en: "No harm done. Chocolate?",
+        time: "00:28",
+        seconds: 28,
+        note: "No harm done : 아무 피해도 없었으니 괜찮아요",
+        extras: []
+      },
+      {
+        id: "d52_10",
+        role: "A",
+        roleLabel: "화자 (여성)",
+        kr: "저는 초콜릿 엄청 좋아해요.",
+        en: "I’m very into chocolate.",
+        time: "00:31",
+        seconds: 31,
+        note: "be very into ~ : ~을 엄청 좋아하다",
+        extras: [
+          { en: "I'm really into K-dramas.", kr: "나 요즘 한국 드라마에 푹 빠졌어." }
+        ]
+      }
+    ]
+  },
+
+  // --- SITUATION 53 ---
+  {
+    day: 53,
+    dayFormatted: "DAY 053",
+    title: "제 캐리어가 안 나왔어요 (공항 수하물 분실)",
+    dialogues: [
+      {
+        id: "d53_1",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "실례합니다. 제 캐리어가 안 나왔어요.",
+        en: "Excuse me. My suitcase didn’t come out.",
+        time: "00:05",
+        seconds: 5,
+        note: "My suitcase didn't come out : 캐리어가 (컨베이어 벨트에서) 안 나왔어요 ('캐리어'는 콩글리시, suitcase/luggage 사용)",
+        extras: [
+          { en: "My luggage didn’t arrive.", kr: "제 짐이 도착하지 않았어요." },
+          { en: "I’d like to report a lost bag.", kr: "수하물 분실 신고를 하고 싶어요." }
+        ]
+      },
+      {
+        id: "d53_2",
+        role: "B",
+        roleLabel: "공항 직원 (남성)",
+        kr: "저런, 죄송합니다. 수하물 표 좀 보여주시겠어요?",
+        en: "I’m sorry to hear that. Can I see your baggage claim tag?",
+        time: "00:09",
+        seconds: 9,
+        note: "baggage claim tag : 수하물 위탁 표/스티커",
+        extras: [
+          { en: "Where is the baggage service office?", kr: "수하물 분실 서비스 센터가 어디에 있나요?" }
+        ]
+      },
+      {
+        id: "d53_3",
+        role: "B",
+        roleLabel: "공항 직원 (남성)",
+        kr: "캐리어가 어떻게 생겼나요?",
+        en: "What does your suitcase look like?",
+        time: "00:13",
+        seconds: 13,
+        note: "What does ~ look like? : 어떻게 생겼나요?",
+        extras: []
+      },
+      {
+        id: "d53_4",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "손잡이에 분홍 리본이 달린 검은색 하드 캐리어예요.",
+        en: "It’s a black hard-shell suitcase with a pink ribbon on the handle.",
+        time: "00:17",
+        seconds: 17,
+        note: "hard-shell suitcase : 하드 케이스 캐리어 / handle : 손잡이",
+        extras: []
+      },
+      {
+        id: "d53_5",
+        role: "B",
+        roleLabel: "공항 직원 (남성)",
+        kr: "경유 항공편이었나요?",
+        en: "Did you have a connecting flight?",
+        time: "00:22",
+        seconds: 22,
+        note: "connecting flight : 경유/환승 항공편 (↔ direct flight: 직항)",
+        extras: []
+      },
+      {
+        id: "d53_6",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "아니요, 서울에서 오는 직항이었어요.",
+        en: "No, it was a direct flight from Seoul.",
+        time: "00:25",
+        seconds: 25,
+        note: "direct flight : 직항편",
+        extras: []
+      },
+      {
+        id: "d53_7",
+        role: "B",
+        roleLabel: "공항 직원 (남성)",
+        kr: "누가 실수로 가져갔을 수도 있어요. 분실 신고서를 작성해 둘게요.",
+        en: "Someone may have taken it by mistake. Let me file a report just in case.",
+        time: "00:29",
+        seconds: 29,
+        note: "take ~ by mistake : 실수로 가져가다 / file a report : 분실 신고서를 접수하다",
+        extras: []
+      },
+      {
+        id: "d53_8",
+        role: "B",
+        roleLabel: "공항 직원 (남성)",
+        kr: "가방을 찾으면 호텔로 배송해 드릴게요.",
+        en: "If it turns up, we’ll deliver it to your hotel.",
+        time: "00:34",
+        seconds: 34,
+        note: "turn up : (분실물이) 나타나다, 발견되다 / deliver to ~ : ~로 배송하다",
+        extras: [
+          { en: "Could you send it to my hotel?", kr: "짐을 제 호텔로 보내 주시겠어요?" },
+          { en: "Will you cover the cost of necessities?", kr: "임시 생필품 구매 비용을 보상해 주시나요?" }
+        ]
+      },
+      {
+        id: "d53_9",
+        role: "B",
+        roleLabel: "공항 직원 (남성)",
+        kr: "하룻밤용 세면도구 키트예요. 칫솔, 치약, 티셔츠가 들어 있어요.",
+        en: "Here’s an overnight kit. Toothbrush, toothpaste, a T-shirt.",
+        time: "00:38",
+        seconds: 38,
+        note: "overnight kit : 항공사가 제공하는 1박용 세면·위생용품 키트",
+        extras: []
+      }
+    ]
+  },
+
+  // --- SITUATION 54 ---
+  {
+    day: 54,
+    dayFormatted: "DAY 054",
+    title: "호텔에서 두 번 결제됐다 (체크아웃 이중 결제)",
+    dialogues: [
+      {
+        id: "d54_1",
+        role: "A",
+        roleLabel: "투숙객 (여성)",
+        kr: "안녕하세요, 체크아웃하려고요. 512호예요.",
+        en: "Hi, we’d like to check out. Room 512.",
+        time: "00:03",
+        seconds: 3,
+        note: "check out : 체크아웃하다",
+        extras: []
+      },
+      {
+        id: "d54_2",
+        role: "A",
+        roleLabel: "투숙객 (여성)",
+        kr: "실례합니다. 두 번 결제된 것 같아요.",
+        en: "Excuse me. I think I was charged twice.",
+        time: "00:07",
+        seconds: 7,
+        note: "be charged twice : 두 번 청구(결제)되다",
+        extras: [
+          { en: "There’s a charge I don’t recognize.", kr: "모르는 결제 내역이 있어요." },
+          { en: "Could you explain this charge?", kr: "이 청구 금액에 대해 설명해 주시겠어요?" }
+        ]
+      },
+      {
+        id: "d54_3",
+        role: "B",
+        roleLabel: "호텔 직원 (남성)",
+        kr: "하나는 체크인 때 걸어 둔 가승인일 수 있어요. 보통 며칠 지나면 풀려요.",
+        en: "One of those may be a pending hold from check-in. It usually drops off in a few days.",
+        time: "00:12",
+        seconds: 12,
+        note: "pending hold : 카드 가승인(보증금 임시 승인) / drop off : (가승인이) 자동으로 풀리다",
+        extras: [
+          { en: "When will the hold be released?", kr: "가승인은 언제 풀리나요?" }
+        ]
+      },
+      {
+        id: "d54_4",
+        role: "A",
+        roleLabel: "투숙객 (여성)",
+        kr: "사흘이 지났는데요. 아직 안 풀렸어요.",
+        en: "It’s been three days. It hasn’t dropped off.",
+        time: "00:17",
+        seconds: 17,
+        note: "It has been ~ : ~의 시간이 흘렀다",
+        extras: []
+      },
+      {
+        id: "d54_5",
+        role: "B",
+        roleLabel: "호텔 직원 (남성)",
+        kr: "맞네요. 두 번째 결제가 실수로 처리됐어요. 정말 죄송합니다.",
+        en: "You’re right. The second charge went through by mistake. I’m so sorry about that.",
+        time: "00:21",
+        seconds: 21,
+        note: "go through : (결제가) 승인 처리되다",
+        extras: []
+      },
+      {
+        id: "d54_6",
+        role: "A",
+        roleLabel: "투숙객 (여성)",
+        kr: "추가로 결제된 금액을 환불해 주시겠어요?",
+        en: "Could you refund the extra charge?",
+        time: "00:26",
+        seconds: 26,
+        note: "refund the extra charge : 초과 청구된 금액을 환불하다",
+        extras: [
+          { en: "Could I get an itemized bill?", kr: "상세 내역 영수증을 받을 수 있을까요?" }
+        ]
+      },
+      {
+        id: "d54_7",
+        role: "B",
+        roleLabel: "호텔 직원 (남성)",
+        kr: "취소 처리했어요. 영업일 기준 3~5일 안에 환불될 거예요.",
+        en: "I’ve reversed it. You’ll see the refund in three to five business days.",
+        time: "00:30",
+        seconds: 30,
+        note: "reverse a charge : 승인을 취소하다 / business days : 영업일 (주말·공휴일 제외)",
+        extras: []
+      },
+      {
+        id: "d54_8",
+        role: "A",
+        roleLabel: "투숙객 (여성)",
+        kr: "그걸 서면(영수증)으로 받을 수 있을까요?",
+        en: "Could I get that in writing?",
+        time: "00:35",
+        seconds: 35,
+        note: "in writing : 서면으로, 문서 형태로",
+        extras: [
+          { en: "Could you email me the receipt?", kr: "영수증을 제 이메일로 보내 주시겠어요?" }
+        ]
+      }
+    ]
+  },
+
+  // --- SITUATION 55 ---
+  {
+    day: 55,
+    dayFormatted: "DAY 055",
+    title: "미국 버스에서 이거 미술관 가나요? (목적지 확인과 하차 부탁)",
+    dialogues: [
+      {
+        id: "d55_1",
+        role: "A",
+        roleLabel: "승객 (여성)",
+        kr: "안녕하세요. 이 버스 미술관 가나요?",
+        en: "Hi. Does this bus go to the art museum?",
+        time: "00:04",
+        seconds: 4,
+        note: "Does this bus go to ~? : 이 버스가 ~로 가나요?",
+        extras: [
+          { en: "Which bus goes downtown?", kr: "시내로 가는 버스는 몇 번인가요?" },
+          { en: "Where should I get off for the museum?", kr: "미술관에 가려면 어디서 내려야 하나요?" }
+        ]
+      },
+      {
+        id: "d55_2",
+        role: "B",
+        roleLabel: "버스 기사 (남성)",
+        kr: "그럼요. 타세요.",
+        en: "It sure does. Hop on.",
+        time: "00:08",
+        seconds: 8,
+        note: "Hop on : (버스·기차 등에) 어서 올라타세요",
+        extras: []
+      },
+      {
+        id: "d55_3",
+        role: "A",
+        roleLabel: "승객 (여성)",
+        kr: "카드로 내도 되나요?",
+        en: "Can I pay by card?",
+        time: "00:11",
+        seconds: 11,
+        note: "pay by card : 카드로 결제하다",
+        extras: [
+          { en: "Do you take cash?", kr: "현금도 받으시나요?" }
+        ]
+      },
+      {
+        id: "d55_4",
+        role: "B",
+        roleLabel: "버스 기사 (남성)",
+        kr: "여기 대기만 하시면 돼요.",
+        en: "Just tap it right here.",
+        time: "00:13",
+        seconds: 13,
+        note: "tap : (카드를 단말기에) 대다, 태그하다",
+        extras: []
+      },
+      {
+        id: "d55_5",
+        role: "A",
+        roleLabel: "승객 (여성)",
+        kr: "몇 정거장 가야 해요?",
+        en: "How many stops is it?",
+        time: "00:16",
+        seconds: 16,
+        note: "How many stops is it? : 몇 정거장이나 가야 하나요?",
+        extras: []
+      },
+      {
+        id: "d55_6",
+        role: "B",
+        roleLabel: "버스 기사 (남성)",
+        kr: "열 정거장쯤이요. 20분 정도 걸려요.",
+        en: "About ten stops. Maybe twenty minutes.",
+        time: "00:19",
+        seconds: 19,
+        note: "ten stops : 10개 정류장",
+        extras: []
+      },
+      {
+        id: "d55_7",
+        role: "A",
+        roleLabel: "승객 (여성)",
+        kr: "도착하면 알려주시겠어요?",
+        en: "Could you let me know when we get there?",
+        time: "00:23",
+        seconds: 23,
+        note: "Could you let me know when ~? : ~할 때 저에게 알려주시겠어요?",
+        extras: [
+          { en: "Is the next stop the art museum?", kr: "다음 정류장이 미술관인가요?" }
+        ]
+      },
+      {
+        id: "d55_8",
+        role: "B",
+        roleLabel: "버스 기사 (남성)",
+        kr: "알겠어요. 도착하면 큰 소리로 불러드릴게요.",
+        en: "You got it. I’ll call it out for you.",
+        time: "00:27",
+        seconds: 27,
+        note: "call out : 외치다, 소리쳐 알려주다",
+        extras: []
+      },
+      {
+        id: "d55_9",
+        role: "A",
+        roleLabel: "승객 (여성)",
+        kr: "감사합니다! 저희 여기서 내려요.",
+        en: "Thank you! This is our stop.",
+        time: "00:31",
+        seconds: 31,
+        note: "This is my/our stop : 저(희) 이번 정류장에서 내려요",
+        extras: [
+          { en: "Excuse me, coming through. This is my stop.", kr: "실례합니다, 지나갈게요. 저 여기서 내려요." }
+        ]
+      }
+    ]
+  },
+
+  // --- SITUATION 56 ---
+  {
+    day: 56,
+    dayFormatted: "DAY 056",
+    title: "거스름돈이 모자라요 (기념품점 거스름돈 확인)",
+    dialogues: [
+      {
+        id: "d56_1",
+        role: "B",
+        roleLabel: "가게 주인 (남성)",
+        kr: "23달러입니다.",
+        en: "That’ll be twenty-three dollars.",
+        time: "00:03",
+        seconds: 3,
+        note: "That will be ~ : (가격이) ~입니다",
+        extras: []
+      },
+      {
+        id: "d56_2",
+        role: "A",
+        roleLabel: "손님 (여성)",
+        kr: "여기요. 50달러로 계산할게요.",
+        en: "Here you go. Out of fifty.",
+        time: "00:06",
+        seconds: 6,
+        note: "Out of fifty : 50달러짜리 지폐를 내밀며 지불할 때 쓰는 표현",
+        extras: [
+          { en: "I gave you a fifty.", kr: "제가 50달러짜리 드렸어요." }
+        ]
+      },
+      {
+        id: "d56_3",
+        role: "B",
+        roleLabel: "가게 주인 (남성)",
+        kr: "22달러입니다. 좋은 저녁 보내세요.",
+        en: "Twenty-two dollars. Have a wonderful evening.",
+        time: "00:10",
+        seconds: 10,
+        note: "Have a wonderful evening : 좋은 저녁 보내세요",
+        extras: []
+      },
+      {
+        id: "d56_4",
+        role: "A",
+        roleLabel: "손님 (여성)",
+        kr: "실례합니다. 거스름돈을 잘못 주신 것 같아요.",
+        en: "Excuse me. I think you gave me the wrong change.",
+        time: "00:14",
+        seconds: 14,
+        note: "give the wrong change : 거스름돈을 잘못 주다",
+        extras: [
+          { en: "I think I’m missing five dollars.", kr: "5달러가 덜 들어온 것 같아요." }
+        ]
+      },
+      {
+        id: "d56_5",
+        role: "A",
+        roleLabel: "손님 (여성)",
+        kr: "23달러였고, 50달러를 드렸어요. 22달러가 아니라 27달러를 거슬러 주셔야 해요.",
+        en: "It was twenty-three dollars. I gave you fifty. That’s twenty-seven back, not twenty-two.",
+        time: "00:19",
+        seconds: 19,
+        note: "twenty-seven back : 거스름돈으로 돌아와야 할 27달러",
+        extras: []
+      },
+      {
+        id: "d56_6",
+        role: "A",
+        roleLabel: "손님 (여성)",
+        kr: "다시 한번 세어 주시겠어요?",
+        en: "Could you count it again, please?",
+        time: "00:24",
+        seconds: 24,
+        note: "count it again : 다시 세어보다",
+        extras: [
+          { en: "Could I get a receipt, please?", kr: "영수증 좀 주시겠어요?" }
+        ]
+      },
+      {
+        id: "d56_7",
+        role: "B",
+        roleLabel: "가게 주인 (남성)",
+        kr: "22달러네요. 얼마여야 하죠? 27달러요. 감사합니다.",
+        en: "Twenty-two. And it should be? Twenty-seven. Thank you.",
+        time: "00:28",
+        seconds: 28,
+        note: "It should be ~ : 원래 ~이어야 한다",
+        extras: [
+          { en: "Could you break a hundred?", kr: "100달러짜리 잔돈으로 바꿔주실 수 있나요?" }
+        ]
+      }
+    ]
+  },
+
+  // --- SITUATION 57 ---
+  {
+    day: 57,
+    dayFormatted: "DAY 057",
+    title: "공항에서 만난 할머니 (입국심사 통역 돕기)",
+    dialogues: [
+      {
+        id: "d57_1",
+        role: "B",
+        roleLabel: "입국심사관 (남성)",
+        kr: "방문 목적이 무엇인가요? 미국에는 왜 오셨나요?",
+        en: "What is the purpose of your visit? Why are you visiting the United States?",
+        time: "00:04",
+        seconds: 4,
+        note: "purpose of your visit : 방문 목적 (입국심사 1순위 질문)",
+        extras: [
+          { en: "I’m here to see my family.", kr: "가족을 만나러 왔어요." },
+          { en: "I’m here on vacation.", kr: "관광 여행 왔어요." }
+        ]
+      },
+      {
+        id: "d57_2",
+        role: "A",
+        roleLabel: "통역 도움 (여성)",
+        kr: "실례합니다. 제가 한국어를 할 줄 아는데, 저분을 도와드려도 될까요?",
+        en: "Excuse me. I speak Korean. May I help her?",
+        time: "00:09",
+        seconds: 9,
+        note: "May I help her? : 제가 저분을 도와드려도 될까요?",
+        extras: [
+          { en: "Do you need any help?", kr: "도움이 필요하신가요?" }
+        ]
+      },
+      {
+        id: "d57_3",
+        role: "B",
+        roleLabel: "입국심사관 (남성)",
+        kr: "네, 그렇게 해주세요.",
+        en: "Please.",
+        time: "00:13",
+        seconds: 13,
+        note: "Please : 그렇게 해주세요, 부탁합니다",
+        extras: []
+      },
+      {
+        id: "d57_4",
+        role: "A",
+        roleLabel: "통역 도움 (여성)",
+        kr: "아드님을 보러 오셨어요. 10년 만에요.",
+        en: "She’s here to see her son. For the first time in ten years.",
+        time: "00:16",
+        seconds: 16,
+        note: "for the first time in ~ years : 몇 년 만에 처음으로",
+        extras: []
+      },
+      {
+        id: "d57_5",
+        role: "B",
+        roleLabel: "입국심사관 (남성)",
+        kr: "얼마나 머무르시나요?",
+        en: "How long will she be staying?",
+        time: "00:20",
+        seconds: 20,
+        note: "How long will you/she be staying? : 체류 기간 묻기",
+        extras: [
+          { en: "I’m staying for two weeks.", kr: "2주 동안 머물러요." }
+        ]
+      },
+      {
+        id: "d57_6",
+        role: "A",
+        roleLabel: "통역 도움 (여성)",
+        kr: "한 달이요.",
+        en: "One month.",
+        time: "00:23",
+        seconds: 23,
+        note: "One month : 한 달 동안",
+        extras: []
+      },
+      {
+        id: "d57_7",
+        role: "B",
+        roleLabel: "입국심사관 (남성)",
+        kr: "어디서 지내시나요?",
+        en: "And where will she be staying?",
+        time: "00:26",
+        seconds: 26,
+        note: "Where will you be staying? : 숙소 위치 묻기",
+        extras: [
+          { en: "I’ll be staying at my daughter’s house.", kr: "딸 집에서 지낼 거예요." }
+        ]
+      },
+      {
+        id: "d57_8",
+        role: "A",
+        roleLabel: "통역 도움 (여성)",
+        kr: "아드님 댁에서요.",
+        en: "At her son’s house.",
+        time: "00:29",
+        seconds: 29,
+        note: "At one's house : ~의 집에서",
+        extras: []
+      },
+      {
+        id: "d57_9",
+        role: "B",
+        roleLabel: "입국심사관 (남성)",
+        kr: "미국에 오신 것을 환영합니다. 아드님 만나러 가세요.",
+        en: "Welcome to America, ma’am. Go see your son.",
+        time: "00:32",
+        seconds: 32,
+        note: "Welcome to America : 미국 방문을 환영합니다",
+        extras: []
+      }
+    ]
+  },
+
+  // --- SITUATION 58 ---
+  {
+    day: 58,
+    dayFormatted: "DAY 058",
+    title: "30도라길래 반팔 입고 나갔습니다 (화씨와 한파)",
+    dialogues: [
+      {
+        id: "d58_1",
+        role: "B",
+        roleLabel: "카페 직원 (남성)",
+        kr: "일기 예보 보셨어요? 오후에 한파가 몰려와요. 30도까지 떨어진대요.",
+        en: "Have you seen the forecast? A cold front is coming in this afternoon. It’s going to drop to thirty degrees.",
+        time: "00:05",
+        seconds: 5,
+        note: "cold front : 한파 전선 / drop to ~ : ~까지 기온이 떨어지다 (미국은 화씨 °F 사용)",
+        extras: [
+          { en: "What’s the weather like today?", kr: "오늘 날씨 어때요?" },
+          { en: "It’s freezing out there.", kr: "바깥 날씨 엄청 추워요." }
+        ]
+      },
+      {
+        id: "d58_2",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "화씨 30도면 섭씨 영하야!",
+        en: "Thirty degrees Fahrenheit! That’s below freezing.",
+        time: "00:11",
+        seconds: 11,
+        note: "Fahrenheit : 화씨 (32°F가 섭씨 0도) / below freezing : 영하의 날씨",
+        extras: [
+          { en: "It’s supposed to snow tonight.", kr: "오늘 밤에 눈이 온대요." }
+        ]
+      },
+      {
+        id: "d58_3",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "이 날씨에 맞게 옷을 안 입고 나왔어요.",
+        en: "I didn’t dress for this weather.",
+        time: "00:15",
+        seconds: 15,
+        note: "dress for ~ : ~ 날씨에 맞춰 입다",
+        extras: [
+          { en: "I should have brought a jacket.", kr: "외투나 재킷을 가져왔어야 했는데." }
+        ]
+      },
+      {
+        id: "d58_4",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "바람 때문에 체감 온도가 훨씬 더 낮아. 가게로 가자.",
+        en: "The wind chill makes it feel even colder. Come on, there’s a store right there.",
+        time: "00:19",
+        seconds: 19,
+        note: "wind chill : 바람에 의한 체감 온도",
+        extras: []
+      },
+      {
+        id: "d58_5",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "날씨에 맞게 안 입고 나왔어요. 따뜻한 외투 있나요?",
+        en: "I didn’t dress for this weather. Do you have a warm coat?",
+        time: "00:24",
+        seconds: 24,
+        note: "warm coat : 따뜻한 외투/코트",
+        extras: [
+          { en: "Do you have gloves and scarves?", kr: "장갑이랑 목도리도 있나요?" }
+        ]
+      },
+      {
+        id: "d58_6",
+        role: "B",
+        roleLabel: "옷가게 점원 (남성)",
+        kr: "가벼운 걸로 드릴까요, 아주 따뜻한 걸로 드릴까요?",
+        en: "And do you want something light, or really warm?",
+        time: "00:29",
+        seconds: 29,
+        note: "something light : 가벼운 옷 / really warm : 아주 따뜻한 옷",
+        extras: [
+          { en: "Can I try this on?", kr: "이거 입어봐도 될까요?" }
+        ]
+      },
+      {
+        id: "d58_7",
+        role: "A",
+        roleLabel: "여행자 (여성)",
+        kr: "아주 따뜻한 걸로요. 제일 따뜻한 걸로 주세요.",
+        en: "Really warm. The warmest one you have.",
+        time: "00:33",
+        seconds: 33,
+        note: "the warmest one : 가장 따뜻한 것",
+        extras: []
+      }
+    ]
+  },
+
+  // --- SITUATION 59 ---
+  {
+    day: 59,
+    dayFormatted: "DAY 059",
+    title: "예약을 6시로 앞당겨야 할 때 (식당 예약 시간 변경)",
+    dialogues: [
+      {
+        id: "d59_1",
+        role: "B",
+        roleLabel: "식당 직원 (남성)",
+        kr: "안녕하세요, 전화 주셔서 감사합니다. 무엇을 도와드릴까요?",
+        en: "Good afternoon, thank you for calling. How can I help you?",
+        time: "00:03",
+        seconds: 3,
+        note: "Thank you for calling : 전화 주셔서 감사합니다",
+        extras: []
+      },
+      {
+        id: "d59_2",
+        role: "A",
+        roleLabel: "손님 (여성)",
+        kr: "7시 반에 김하나 이름으로 2명 예약했는데요. 예약을 6시로 앞당길 수 있을까요?",
+        en: "Hi. I have a reservation for two at seven thirty, under Hana Kim. Could we move our reservation up to six?",
+        time: "00:07",
+        seconds: 7,
+        note: "move a reservation up to ~ : 예약을 ~시로 앞당기다 (시간을 앞당길 때는 move up)",
+        extras: [
+          { en: "Could we push our reservation back to eight?", kr: "예약을 8시로 미룰 수 있을까요? (미룰 때는 push back)" },
+          { en: "I’d like to change my reservation.", kr: "예약을 변경하고 싶어요." }
+        ]
+      },
+      {
+        id: "d59_3",
+        role: "B",
+        roleLabel: "식당 직원 (남성)",
+        kr: "죄송하지만 오늘 6시는 예약이 꽉 찼어요.",
+        en: "I’m sorry, six o’clock is fully booked tonight.",
+        time: "00:13",
+        seconds: 13,
+        note: "fully booked : 예약이 꽉 찬, 만석인",
+        extras: [
+          { en: "Could you put us on the waitlist?", kr: "대기자 명단에 올려 주시겠어요?" }
+        ]
+      },
+      {
+        id: "d59_4",
+        role: "A",
+        roleLabel: "손님 (여성)",
+        kr: "더 이른 시간은 없나요? 아니면 바 자리라도요?",
+        en: "Is there anything earlier? Or anything at the bar?",
+        time: "00:17",
+        seconds: 17,
+        note: "anything earlier : 더 이른 시간대 / at the bar : 바 테이블 자리",
+        extras: []
+      },
+      {
+        id: "d59_5",
+        role: "B",
+        roleLabel: "식당 직원 (남성)",
+        kr: "5시 45분은 가능한데, 바 자리여야 해요.",
+        en: "I can do five forty-five, but it would have to be at the bar.",
+        time: "00:21",
+        seconds: 21,
+        note: "it would have to be ~ : ~이어야만 합니다",
+        extras: []
+      },
+      {
+        id: "d59_6",
+        role: "A",
+        roleLabel: "손님 (여성)",
+        kr: "5시 45분 바 자리 좋아요. 그걸로 할게요.",
+        en: "Five forty-five at the bar is perfect. We’ll take it.",
+        time: "00:26",
+        seconds: 26,
+        note: "We'll take it : 그걸로 예약 진행할게요",
+        extras: []
+      },
+      {
+        id: "d59_7",
+        role: "A",
+        roleLabel: "손님 (여성)",
+        kr: "하나 더요. 저희가 7시 반까지는 나가야 하는데, 시간 충분할까요?",
+        en: "One more thing. We need to leave by seven thirty. Is that enough time?",
+        time: "00:30",
+        seconds: 30,
+        note: "leave by ~ : ~시까지는 자리를 뜨다 / Is that enough time? : 시간이 충분할까요?",
+        extras: []
+      },
+      {
+        id: "d59_8",
+        role: "B",
+        roleLabel: "식당 직원 (남성)",
+        kr: "물론이죠. 서버에게 말씀하시면 계산서를 미리 가져다드릴게요.",
+        en: "Absolutely. If you let your server know, we’ll bring the check early.",
+        time: "00:35",
+        seconds: 35,
+        note: "bring the check early : 계산서를 미리 가져다주다",
+        extras: [
+          { en: "I'd like to cancel my reservation.", kr: "예약을 취소하고 싶어요." },
+          { en: "Is there a cancellation fee?", kr: "예약 취소 수수료가 있나요?" }
+        ]
+      }
     ]
   }
 ];
