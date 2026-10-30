@@ -2,7 +2,7 @@
 // 여행영어 실전 대사집 데이터 파일 (data.js) - 1번 ~ 50번 전체 원문 완벽 수록
 // ============================================================================
 
-const lectures = [
+const situationsData = [
   {
     id: 1,
     title: "조식은 몇 시부터예요?",
@@ -2046,7 +2046,7 @@ const lectures = [
         seconds: 9,
         note: "baggage claim tag : 수하물 위탁 표/스티커",
         extras: [
-          { en: "Where is the baggage service office?", kr: "수하물 분실 서비스 센터가 어디에 있나요?" }
+          { en: "Where is the baggage service office?", kr: "수하물 분실 서비스 사무실이 어디에 있나요?" }
         ]
       },
       {
