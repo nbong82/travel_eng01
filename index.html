@@ -1,474 +1,736 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>여행영어 실전 대사집 - 롤플레이 & 스피킹 훈련</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실전 여행 영어 - AI 롤플레이 & 말하기 트레이너</title>
   <style>
     :root {
+      --primary: #0284c7; /* 여행 테마 시그니처 오션 블루 */
+      --primary-hover: #0369a1;
+      --primary-light: #f0f9ff;
       --bg: #f8fafc;
       --card-bg: #ffffff;
       --text-main: #0f172a;
-      --text-sub: #475569;
+      --text-sub: #64748b;
       --border: #e2e8f0;
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --role-a-bg: #fce7f3;
-      --role-a-text: #be185d;
-      --role-b-bg: #dbeafe;
-      --role-b-text: #1d4ed8;
-      --en-bg: #f1f5f9;
-      --note-bg: #fffbeb;
-      --note-border: #fde68a;
-      --note-text: #92400e;
-      --success: #16a34a;
-      --success-bg: #dcfce7;
-      --extra-header-bg: #f1f5f9;
+      --role-a: #0ea5e9; /* 여행자/손님 */
+      --role-b: #f59e0b; /* 현지 직원/승무원/호스트 */
+      --success: #059669;
+      --danger: #dc2626;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg);
       color: var(--text-main);
+      padding: 24px 16px;
       line-height: 1.6;
-      padding: 20px 14px 60px;
     }
+
     .container { max-width: 820px; margin: 0 auto; }
 
-    /* Navigation */
-    .nav-bar {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px 16px;
-      margin-bottom: 14px;
-      display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
-      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
-    }
-    .situation-select {
-      flex: 1; min-width: 220px; padding: 10px 14px;
-      font-size: 0.95rem; font-weight: 700; color: var(--text-main);
-      background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px;
-      cursor: pointer; outline: none;
-    }
-    .nav-btns { display: flex; gap: 6px; }
-    .nav-btn {
-      border: 1px solid var(--border); background: #ffffff; color: var(--text-main);
-      padding: 10px 14px; border-radius: 10px; font-size: 0.85rem; font-weight: 700;
-      cursor: pointer; transition: all 0.15s;
-    }
-    .nav-btn:hover:not(:disabled) { background: #f1f5f9; }
-    .nav-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-
-    /* Header */
     header {
-      background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px;
-      padding: 22px 24px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
-    }
-    .header-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
-    .category-badge {
-      font-size: 0.8rem; font-weight: 700; color: var(--primary);
-      background: #eff6ff; padding: 4px 12px; border-radius: 999px; border: 1px solid #bfdbfe;
-    }
-    .voice-status { font-size: 0.78rem; color: var(--text-sub); background: #f1f5f9; padding: 4px 12px; border-radius: 999px; }
-    h1 { font-size: 1.4rem; font-weight: 800; margin-bottom: 6px; }
-    .subtitle { font-size: 0.9rem; color: var(--text-sub); }
-
-    /* Controls */
-    .controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
-    .btn {
-      border: 1px solid var(--border); background: var(--card-bg); color: var(--text-main);
-      padding: 10px 16px; border-radius: 10px; font-size: 0.9rem; font-weight: 600;
-      cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
-    }
-    .btn:hover { background: #f1f5f9; }
-    .btn-primary { background: var(--primary); color: #ffffff; border-color: var(--primary); }
-    .btn-primary:hover { background: var(--primary-hover); }
-    .btn-primary.playing { background: #dc2626; border-color: #dc2626; }
-
-    /* Section Titles */
-    .section-title {
-      font-size: 1.1rem; font-weight: 800; color: var(--text-main);
-      margin: 26px 0 12px; display: flex; align-items: center; gap: 8px;
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(2, 132, 199, 0.06);
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
     }
 
-    /* Dialogue & Extra Item Cards */
-    .item-list { display: flex; flex-direction: column; gap: 10px; }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #0369a1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lecture-select-box {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    select {
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 10px;
+      border: 2px solid var(--primary);
+      background-color: #fff;
+      color: var(--primary);
+      outline: none;
+      cursor: pointer;
+    }
+
+    .desc { font-size: 0.9rem; color: var(--text-sub); }
+
+    .voice-status {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      background: #f0f9ff;
+      border-radius: 20px;
+      color: #0369a1;
+    }
+
+    /* 툴바 */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      background: white;
+      padding: 12px 18px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .btn-group { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      padding: 9px 15px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    button:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .btn-primary { background-color: var(--primary); color: white; }
+    .btn-primary:hover { background-color: var(--primary-hover); }
+    .btn-primary.playing { background-color: var(--danger); }
+
+    .btn-secondary { background-color: #f1f5f9; color: #334155; }
+    .btn-secondary:hover { background-color: #e2e8f0; }
+
+    .btn-nav {
+      background-color: var(--primary-light);
+      color: var(--primary);
+      padding: 8px 12px;
+      font-size: 0.88rem;
+      border: 1px solid #bae6fd;
+    }
+    .btn-nav:hover { background-color: #e0f2fe; }
+
+    /* 다이얼로그 카드 */
+    .dialogue-list { display: flex; flex-direction: column; gap: 16px; }
+
     .card {
-      background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
-      overflow: hidden; box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 18px 20px;
+      border: 2px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      transition: all 0.25s ease;
     }
-    .card.success-card { border-color: var(--success); background: #f0fdf4; }
 
-    .card-header {
-      padding: 14px 16px; display: flex; align-items: center; justify-content: space-between;
-      gap: 12px; cursor: pointer; user-select: none;
+    .card.active-playing {
+      border-color: var(--primary);
+      background-color: #f0f9ff;
+      transform: scale(1.008);
     }
-    .card-header:hover { background: #f8fafc; }
-    .header-left { display: flex; align-items: center; gap: 10px; flex: 1; flex-wrap: wrap; }
-    .toggle-icon { font-size: 0.8rem; color: var(--text-sub); transition: transform 0.2s ease; width: 16px; text-align: center; }
-    .card.open .toggle-icon { transform: rotate(90deg); color: var(--primary); }
 
-    .role-badge { font-size: 0.78rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; }
-    .role-A { background: var(--role-a-bg); color: var(--role-a-text); }
-    .role-B { background: var(--role-b-bg); color: var(--role-b-text); }
-    .role-EXTRA { background: #e2e8f0; color: #334155; }
-    .kr-text { font-size: 1.02rem; font-weight: 700; }
+    .card-main-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
 
-    .speak-practice-btn {
-      border: 1px solid #fbcfe8; background: #fdf2f8; color: #db2777;
-      padding: 3px 8px; border-radius: 6px; font-size: 0.78rem; font-weight: 700; cursor: pointer;
-    }
-    .speak-practice-btn:hover { background: #db2777; color: #ffffff; }
-    .speak-practice-btn.listening { background: #dc2626; color: #ffffff; border-color: #dc2626; }
+    .kr-container { display: flex; align-items: flex-start; gap: 10px; flex: 1; }
 
-    .card-body {
-      display: none; padding: 12px 16px 16px 42px;
-      border-top: 1px dashed var(--border); background: #fcfdff;
+    .toggle-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: bold;
+      transition: all 0.2s;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
-    .card.open .card-body { display: block; }
+    .card.open .toggle-btn {
+      transform: rotate(90deg);
+      background-color: var(--primary);
+      color: white;
+    }
 
-    .en-box {
-      background: var(--en-bg); padding: 12px 14px; border-radius: 8px;
-      display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    .speaker-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 6px;
+      color: white;
+      flex-shrink: 0;
+      margin-top: 4px;
     }
-    .en-text { font-size: 1.08rem; font-weight: 800; color: #1e293b; }
-    .speak-audio-btn {
-      border: 1px solid #cbd5e1; background: #ffffff; color: var(--text-main);
-      padding: 5px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; cursor: pointer;
-    }
-    .speak-audio-btn:hover { background: var(--primary); color: #ffffff; }
+    .speaker-A { background-color: var(--role-a); }
+    .speaker-B { background-color: var(--role-b); }
 
-    .feedback-box {
-      margin-bottom: 8px; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; display: none;
+    .kr-text-wrap { flex: 1; }
+    .kr-text { font-size: 1.1rem; font-weight: 700; color: #0f172a; line-height: 1.45; }
+
+    .actions-wrap { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+    .btn-record {
+      background-color: #fef2f2;
+      color: #dc2626;
+      border: 1px solid #fecaca;
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
     }
-    .feedback-success { background: var(--success-bg); color: var(--success); border: 1px solid #bbf7d0; }
-    .feedback-retry { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+    .btn-record:hover { background-color: #fee2e2; }
+    .btn-record.recording {
+      background-color: #dc2626;
+      color: white;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .yt-link {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+      text-decoration: none;
+      background: #f1f5f9;
+      padding: 6px 9px;
+      border-radius: 8px;
+    }
+    .yt-link:hover { background: #e2e8f0; color: #0f172a; }
+
+    /* 말하기 분석 결과 패널 */
+    .analysis-panel {
+      display: none;
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+    }
+    .analysis-panel.show { display: block; }
+
+    .panel-header {
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .score-badge { padding: 2px 8px; border-radius: 20px; font-weight: 800; }
+    .score-high { background: #dcfce7; color: #15803d; }
+    .score-mid { background: #fef3c7; color: #b45309; }
+    .score-low { background: #fee2e2; color: #b91c1c; }
+
+    .speech-transcript { font-size: 0.95rem; margin-bottom: 8px; color: #334155; }
+    .diff-box {
+      font-size: 0.92rem;
+      padding: 8px 12px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      line-height: 1.5;
+    }
+    .match-word { color: #16a34a; font-weight: 700; }
+    .miss-word { color: #dc2626; text-decoration: line-through; margin-right: 4px; }
+
+    /* 영어 정답 패널 */
+    .en-panel {
+      display: none;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+    }
+    .card.open .en-panel { display: block; }
+
+    .en-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .en-text { font-size: 1.15rem; font-weight: 700; color: #0f172a; }
+
+    .btn-tts {
+      background-color: var(--primary-light);
+      color: var(--primary);
+      padding: 6px 11px;
+      font-size: 0.85rem;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .btn-tts:hover { background-color: #e0f2fe; }
 
     .note-box {
-      margin-top: 8px; background: var(--note-bg); border: 1px solid var(--note-border);
-      color: var(--note-text); padding: 8px 12px; border-radius: 8px; font-size: 0.86rem;
+      background-color: #f8fafc;
+      border-left: 4px solid var(--primary);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 0.88rem;
     }
+    .note-title { font-weight: 700; color: #0369a1; margin-bottom: 4px; }
 
-    /* Tip Footer Card */
-    .tip-card {
-      margin-top: 24px; background: #eff6ff; border: 1px solid #bfdbfe;
-      border-radius: 12px; padding: 14px 18px; color: #1e3a8a; font-size: 0.92rem; font-weight: 500;
+    .extras-list {
+      list-style: none;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
     }
-    .tip-title { font-weight: 800; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+    .extra-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #475569;
+    }
+    .extra-item strong { color: #0f172a; }
 
-    @media (max-width: 600px) {
-      .card-body { padding: 12px 14px 14px; }
-      .nav-bar { flex-direction: column; align-items: stretch; }
-      .nav-btn { flex: 1; }
+    .btn-mini-tts {
+      background: #e2e8f0;
+      color: #334155;
+      padding: 2px 7px;
+      font-size: 0.75rem;
+      border-radius: 4px;
     }
+    .btn-mini-tts:hover { background: #cbd5e1; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="nav-bar">
-      <select id="situationSelect" class="situation-select" onchange="selectSituationByIndex(this.value)"></select>
-      <div class="nav-btns">
-        <button id="prevBtn" class="nav-btn" onclick="moveSituation(-1)">◀ 이전</button>
-        <button id="nextBtn" class="nav-btn" onclick="moveSituation(1)">다음 ▶</button>
+
+<div class="container">
+  <header>
+    <div class="header-top">
+      <h1 id="lectureTitle">✈️ 실전 여행 영어 회화</h1>
+      <div class="lecture-select-box">
+        <button id="headerPrevBtn" class="btn-nav" onclick="navLecture(-1)" title="이전 강의">◀ 이전</button>
+        <select id="lectureSelect" onchange="changeLecture(this.value)"></select>
+        <button id="headerNextBtn" class="btn-nav" onclick="navLecture(1)" title="다음 강의">다음 ▶</button>
       </div>
     </div>
+    <p class="desc">상황별 여행 영어 표현을 보고 [🎙️ 말하기]를 눌러 영작을 시도해 보세요. 3초간 말이 없거나 [⏹️ 완료]를 누르면 즉시 분석 채점됩니다.</p>
+    <div id="voiceStatus" class="voice-status">음성 엔진 준비 중...</div>
+  </header>
 
-    <header>
-      <div class="header-top">
-        <span id="categoryBadge" class="category-badge">TRAVEL ENGLISH</span>
-        <span id="voiceStatus" class="voice-status">음성 준비 중...</span>
-      </div>
-      <h1 id="situationTitle">로딩 중...</h1>
-      <p class="subtitle">한글 문장을 보고 [말하기 🎤]로 스피킹 채점을 하거나, 카드를 눌러 영문을 확인하세요.</p>
-    </header>
-
-    <div class="controls">
-      <button id="playAllBtn" class="btn btn-primary" onclick="togglePlayAll()">▶ 대화 연속 듣기</button>
-      <button class="btn" onclick="expandAll()">전체 펼치기</button>
-      <button class="btn" onclick="collapseAll()">전체 접기</button>
+  <div class="toolbar">
+    <div class="btn-group">
+      <button id="playAllBtn" class="btn-primary" onclick="togglePlayAll()">
+        ▶ 대화 전체 연속 듣기 (역할 롤플레이)
+      </button>
     </div>
-
-    <!-- 1. 영상 속 실전 대사 섹션 -->
-    <div class="section-title">🎬 영상 속 실전 대화</div>
-    <div id="dialogueContainer" class="item-list"></div>
-
-    <!-- 2. 독립된 추가 표현 섹션 (한글 먼저-토글 영문) -->
-    <div class="section-title">➕ 함께 익히면 좋은 추가 표현</div>
-    <div id="extraContainer" class="item-list"></div>
-
-    <!-- 상황별 TIP 카드 -->
-    <div id="tipContainer"></div>
+    <div class="btn-group">
+      <button class="btn-secondary" onclick="toggleAllCards(true)">전체 정답 열기</button>
+      <button class="btn-secondary" onclick="toggleAllCards(false)">전체 접기</button>
+    </div>
   </div>
 
-  <script src="data.js"></script>
-  <script>
-    let currentIndex = 0;
-    let femaleVoice = null;
-    let maleVoice = null;
-    let isPlayingAll = false;
-    let currentPlayIndex = 0;
+  <div id="dialogueList" class="dialogue-list"></div>
+</div>
 
-    function initApp() {
-      if (typeof situationsData === "undefined" || !Array.isArray(situationsData) || situationsData.length === 0) {
-        document.getElementById("dialogueContainer").innerHTML = `<div style="padding:20px;text-align:center;">⚠️ data.js 파일을 찾을 수 없습니다.</div>`;
-        return;
-      }
-      const savedId = Number(localStorage.getItem("lastSituationId"));
-      const foundIdx = situationsData.findIndex(item => item.id === savedId);
-      currentIndex = foundIdx !== -1 ? foundIdx : 0;
-      initDropdown();
-      selectSituationByIndex(currentIndex);
+<script src="data.js"></script>
+
+<script>
+  let currentLectureIndex = 0;
+  let isPlayingAll = false;
+  let currentPlayIndex = 0;
+  let femaleVoice = null;
+  let maleVoice = null;
+  let recognition = null;
+  let activeRecordingIdx = null;
+  let speechSilenceTimer = null;
+  let accumulatedTranscript = "";
+
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (SpeechRecognition) {
+    recognition = new SpeechRecognition();
+    recognition.lang = 'en-US';
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.maxAlternatives = 1;
+  }
+
+  function loadVoices() {
+    const voices = window.speechSynthesis.getVoices();
+    const enVoices = voices.filter(v => v.lang.startsWith("en"));
+    const femaleKeywords = ["Female", "Zira", "Samantha", "Victoria", "Karen", "Tessa", "Google US English", "Aria", "Jenny"];
+    const maleKeywords = ["Male", "David", "Mark", "Alex", "Daniel", "Guy", "Christopher", "Jacob"];
+
+    femaleVoice = enVoices.find(v => femaleKeywords.some(k => v.name.includes(k))) || enVoices[0] || null;
+    maleVoice = enVoices.find(v => v !== femaleVoice && maleKeywords.some(k => v.name.includes(k))) || enVoices.find(v => v !== femaleVoice) || femaleVoice;
+
+    const statusEl = document.getElementById("voiceStatus");
+    if (femaleVoice && maleVoice) {
+      statusEl.textContent = `🎙️ TTS 음성 연동 완료: 역할 A [${femaleVoice.name.split(' ')[0]}] / 역할 B [${maleVoice.name.split(' ')[0]}]`;
+    } else {
+      statusEl.textContent = `🎙️ 기본 TTS 엔진 준비 완료 (피치 조절 모드)`;
     }
+  }
 
-    function initDropdown() {
-      const selectEl = document.getElementById("situationSelect");
-      selectEl.innerHTML = situationsData.map((item, idx) => {
-        const numStr = String(item.id).padStart(2, "0");
-        return `<option value="${idx}">${numStr}. [${item.category}] ${item.title}</option>`;
-      }).join("");
-      selectEl.value = currentIndex;
+  window.speechSynthesis.onvoiceschanged = loadVoices;
+  setTimeout(loadVoices, 300);
+
+  function initLectureSelect() {
+    const select = document.getElementById("lectureSelect");
+    select.innerHTML = lectures.map((lec, idx) => `
+      <option value="${idx}">${lec.dayFormatted || 'DAY ' + (idx + 1)} : ${lec.title}</option>
+    `).join("");
+    updateNavButtons();
+  }
+
+  function updateNavButtons() {
+    const prevBtn = document.getElementById("headerPrevBtn");
+    const nextBtn = document.getElementById("headerNextBtn");
+    if (prevBtn) prevBtn.disabled = (currentLectureIndex <= 0);
+    if (nextBtn) nextBtn.disabled = (currentLectureIndex >= lectures.length - 1);
+  }
+
+  function navLecture(delta) {
+    const targetIdx = currentLectureIndex + delta;
+    if (targetIdx >= 0 && targetIdx < lectures.length) {
+      document.getElementById("lectureSelect").value = targetIdx;
+      changeLecture(targetIdx);
     }
+  }
 
-    function selectSituationByIndex(index) {
-      stopPlayAll();
-      currentIndex = Number(index);
-      const currentItem = situationsData[currentIndex];
-      if (!currentItem) return;
+  function changeLecture(index) {
+    if (isPlayingAll) stopPlayAll();
+    currentLectureIndex = parseInt(index);
+    const lec = lectures[currentLectureIndex];
+    document.getElementById("lectureTitle").textContent = `✈️ ${lec.dayFormatted || 'DAY ' + (currentLectureIndex + 1)} : ${lec.title}`;
+    updateNavButtons();
+    renderDialogues();
+  }
 
-      localStorage.setItem("lastSituationId", currentItem.id);
-      document.getElementById("situationSelect").value = currentIndex;
+  function renderDialogues() {
+    const lec = lectures[currentLectureIndex];
+    const listEl = document.getElementById("dialogueList");
 
-      const numStr = String(currentItem.id).padStart(2, "0");
-      document.getElementById("categoryBadge").textContent = `SITUATION ${numStr} · ${currentItem.category} (${currentItem.page || ''})`;
-      document.getElementById("situationTitle").textContent = `${numStr}. ${currentItem.title}`;
+    listEl.innerHTML = lec.dialogues.map((item, idx) => {
+      const extrasHtml = item.extras && item.extras.length > 0 ? `
+        <ul class="extras-list">
+          ${item.extras.map(ex => `
+            <li class="extra-item">
+              <span>➕ <strong>${ex.en}</strong> : ${ex.kr}</span>
+              <button class="btn-mini-tts" onclick="speakText('${ex.en.replace(/'/g, "\\'")}', '${item.role}')">🔊 듣기</button>
+            </li>
+          `).join("")}
+        </ul>
+      ` : "";
 
-      document.getElementById("prevBtn").disabled = currentIndex <= 0;
-      document.getElementById("nextBtn").disabled = currentIndex >= situationsData.length - 1;
+      const ytLinkHtml = lec.videoId && item.seconds !== undefined ? `
+        <a class="yt-link" href="https://youtu.be/${lec.videoId}?t=${item.seconds}" target="_blank" title="유튜브 해설 구간 이동">
+          ⏱️ ${item.time || '영상'}
+        </a>
+      ` : "";
 
-      renderContent(currentItem);
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    function moveSituation(delta) {
-      const nextIdx = currentIndex + delta;
-      if (nextIdx >= 0 && nextIdx < situationsData.length) selectSituationByIndex(nextIdx);
-    }
-
-    function loadVoices() {
-      const voices = window.speechSynthesis.getVoices();
-      // 영어 음성 전체 필터링
-      const enVoices = voices.filter(v => v.lang.startsWith("en"));
-
-      // 1. 여성 목소리 검색
-      femaleVoice =
-        enVoices.find(v => /Google US English|Aria|Jenny|Samantha|Victoria|Zira/i.test(v.name)) ||
-        enVoices[0] ||
-        null;
-
-      // 2. 남성 목소리 검색 (더 넓은 범위의 남성 성우 키워드 탐색)
-      maleVoice =
-        enVoices.find(v => /David|Guy|Christopher|Alex|Daniel|George|Google UK English Male|Male/i.test(v.name)) ||
-        enVoices.find(v => /en-US/i.test(v.lang) && v !== femaleVoice) ||
-        enVoices[1] ||
-        enVoices[0] ||
-        null;
-
-      const statusEl = document.getElementById("voiceStatus");
-      if (statusEl) {
-        statusEl.textContent = enVoices.length > 0 ? "음성 엔진 준비 완료" : "기본 음성 사용";
-      }
-    }
-    if ("speechSynthesis" in window) {
-      window.speechSynthesis.onvoiceschanged = loadVoices;
-      loadVoices();
-    }
-
-    function renderCard(item, prefixId) {
       return `
-        <div class="card" id="card-${prefixId}">
-          <div class="card-header" onclick="toggleCard('${prefixId}')">
-            <div class="header-left">
-              <span class="toggle-icon">▶</span>
-              <span class="role-badge role-${item.role}">${item.roleLabel}</span>
-              <span class="kr-text">${item.kr}</span>
-              <button class="speak-practice-btn" id="mic-${prefixId}" onclick="event.stopPropagation(); startSpeechTest('${prefixId}', '${item.en.replace(/'/g, "\\'")}')">말하기 🎤</button>
+        <div class="card" id="card-${idx}">
+          <div class="card-main-row">
+            <div class="kr-container">
+              <button class="toggle-btn" onclick="toggleCard(${idx})" title="정답 토글">▶</button>
+              <span class="speaker-badge speaker-${item.role}">${item.roleLabel || item.role}</span>
+              <div class="kr-text-wrap">
+                <div class="kr-text">${item.kr}</div>
+              </div>
+            </div>
+            <div class="actions-wrap">
+              <button class="btn-record" id="rec-btn-${idx}" onclick="startSpeaking(${idx})">
+                🎙️ 말하기
+              </button>
+              ${ytLinkHtml}
             </div>
           </div>
-          <div class="card-body">
-            <div class="feedback-box" id="feedback-${prefixId}"></div>
-            <div class="en-box">
-              <span class="en-text">${item.en}</span>
-              <button class="speak-audio-btn" onclick="event.stopPropagation(); speakSentence('${item.en.replace(/'/g, "\\'")}', '${item.role}')">🔊 발음 듣기</button>
+
+          <div class="analysis-panel" id="analysis-${idx}">
+            <div class="panel-header">
+              <span>🗣️ 내 발화 분석 결과</span>
+              <span class="score-badge" id="score-${idx}">일치도: -%</span>
             </div>
-            ${item.note ? `<div class="note-box">${item.note}</div>` : ''}
+            <div class="speech-transcript" id="transcript-${idx}">인식 중...</div>
+            <div class="diff-box" id="diff-${idx}"></div>
+          </div>
+
+          <div class="en-panel">
+            <div class="en-row">
+              <span class="en-text">${item.en}</span>
+              <button class="btn-tts" onclick="speakSingle(${idx})">🔊 원문 듣기</button>
+            </div>
+            <div class="note-box">
+              <div class="note-title">💡 ${item.note || '여행 핵심 표현'}</div>
+              ${extrasHtml}
+            </div>
           </div>
         </div>
       `;
-    }
+    }).join("");
+  }
 
-    function renderContent(situationItem) {
-      // 1. 영상 속 실전 대사 렌더링
-      const dContainer = document.getElementById("dialogueContainer");
-      if (situationItem.dialogues && situationItem.dialogues.length > 0) {
-        dContainer.innerHTML = situationItem.dialogues.map((item, idx) => renderCard(item, `d-${idx}`)).join("");
-      } else {
-        dContainer.innerHTML = `<div style="color:var(--text-sub);padding:10px;">대사 데이터 준비 중입니다.</div>`;
-      }
+  function toggleCard(idx) {
+    document.getElementById(`card-${idx}`).classList.toggle("open");
+  }
 
-      // 2. 추가 표현 독립 렌더링 (한글 우선-토글형)
-      const eContainer = document.getElementById("extraContainer");
-      if (situationItem.extras && situationItem.extras.length > 0) {
-        eContainer.innerHTML = situationItem.extras.map((ex, idx) => {
-          const extraItem = { role: "EXTRA", roleLabel: "추가", kr: ex.kr, en: ex.en, note: "" };
-          return renderCard(extraItem, `e-${idx}`);
-        }).join("");
-      } else {
-        eContainer.innerHTML = `<div style="color:var(--text-sub);padding:10px;">추가 표현이 없습니다.</div>`;
-      }
+  function toggleAllCards(open) {
+    const lec = lectures[currentLectureIndex];
+    lec.dialogues.forEach((_, idx) => {
+      const card = document.getElementById(`card-${idx}`);
+      if (open) card.classList.add("open");
+      else card.classList.remove("open");
+    });
+  }
 
-      // 3. 교재 전용 학습 TIP 렌더링
-      const tipContainer = document.getElementById("tipContainer");
-      if (situationItem.tip) {
-        tipContainer.innerHTML = `
-          <div class="tip-card">
-            <div class="tip-title">💡 SITUATION TIP</div>
-            <div>${situationItem.tip}</div>
-          </div>
-        `;
-      } else {
-        tipContainer.innerHTML = "";
-      }
-    }
-
-    function toggleCard(id) {
-      const card = document.getElementById(`card-${id}`);
-      if (card) card.classList.toggle("open");
-    }
-
-    function expandAll() {
-      document.querySelectorAll(".card").forEach(c => c.classList.add("open"));
-    }
-    function collapseAll() {
-      document.querySelectorAll(".card").forEach(c => c.classList.remove("open"));
-    }
-
-    function speakSentence(text, role = "A", onEnd = null) {
-      if (!("speechSynthesis" in window)) return;
-      window.speechSynthesis.cancel(); // 이전 재생 중단
-
-      const utter = new SpeechSynthesisUtterance(text);
-      utter.lang = "en-US";
+  function speakText(text, role, onEnd) {
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = "en-US";
+    if (role === "A") {
+      if (femaleVoice) utter.voice = femaleVoice;
+      utter.pitch = 1.12;
       utter.rate = 0.95;
+    } else {
+      if (maleVoice) utter.voice = maleVoice;
+      utter.pitch = 0.88;
+      utter.rate = 0.93;
+    }
+    if (onEnd) {
+      utter.onend = onEnd;
+      utter.onerror = onEnd;
+    }
+    window.speechSynthesis.speak(utter);
+  }
 
-      // 남성 역할 판별 (역할 B이거나 라벨에 남성/직원/기사 등이 포함된 경우)
-      const isMale = (role === "B" || String(role).toUpperCase().includes("B"));
+  function speakSingle(idx) {
+    if (isPlayingAll) stopPlayAll();
+    const lec = lectures[currentLectureIndex];
+    const item = lec.dialogues[idx];
+    const card = document.getElementById(`card-${idx}`);
+    clearActiveHighlight();
+    card.classList.add("active-playing");
+    speakText(item.en, item.role, () => {
+      card.classList.remove("active-playing");
+    });
+  }
 
-      if (isMale) {
-        if (maleVoice) {
-          utter.voice = maleVoice;
-        }
-        // 남성적인 굵고 명확한 저음 톤으로 피치 조절 (남성 전용 음성이 없는 기기에서도 완벽 동작)
-        utter.pitch = 0.72; 
+  function clearActiveHighlight() {
+    const lec = lectures[currentLectureIndex];
+    lec.dialogues.forEach((_, idx) => {
+      document.getElementById(`card-${idx}`).classList.remove("active-playing");
+    });
+  }
+
+  function togglePlayAll() {
+    if (isPlayingAll) stopPlayAll();
+    else startPlayAll();
+  }
+
+  function startPlayAll() {
+    isPlayingAll = true;
+    currentPlayIndex = 0;
+    const btn = document.getElementById("playAllBtn");
+    btn.innerHTML = "⏹ 연속 듣기 정지";
+    btn.classList.add("playing");
+    toggleAllCards(true);
+    playNextInSequence();
+  }
+
+  function stopPlayAll() {
+    isPlayingAll = false;
+    window.speechSynthesis.cancel();
+    clearActiveHighlight();
+    const btn = document.getElementById("playAllBtn");
+    btn.innerHTML = "▶ 대화 전체 연속 듣기 (역할 롤플레이)";
+    btn.classList.remove("playing");
+  }
+
+  function playNextInSequence() {
+    const lec = lectures[currentLectureIndex];
+    if (!isPlayingAll || currentPlayIndex >= lec.dialogues.length) {
+      stopPlayAll();
+      return;
+    }
+    clearActiveHighlight();
+    const card = document.getElementById(`card-${currentPlayIndex}`);
+    card.classList.add("active-playing");
+    card.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    const item = lec.dialogues[currentPlayIndex];
+    speakText(item.en, item.role, () => {
+      if (!isPlayingAll) return;
+      currentPlayIndex++;
+      setTimeout(playNextInSequence, 550);
+    });
+  }
+
+  function startSpeaking(idx) {
+    if (!recognition) {
+      alert("현재 브라우저에서는 음성 인식을 지원하지 않습니다. Chrome 또는 Edge 브라우저를 이용해 주세요.");
+      return;
+    }
+
+    if (activeRecordingIdx !== null) {
+      if (activeRecordingIdx === idx) {
+        finishSpeaking(idx);
       } else {
-        if (femaleVoice) {
-          utter.voice = femaleVoice;
-        }
-        // 여성적인 또렷한 톤
-        utter.pitch = 1.15;
+        recognition.stop();
       }
-
-      if (onEnd) {
-        utter.onend = onEnd;
-        utter.onerror = onEnd;
-      }
-
-      window.speechSynthesis.speak(utter);
+      return;
     }
 
-    function startSpeechTest(id, targetText) {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!SpeechRecognition) {
-        alert("이 브라우저는 음성 인식을 지원하지 않습니다. 크롬 브라우저를 사용해 주세요.");
-        return;
-      }
-      const micBtn = document.getElementById(`mic-${id}`);
-      const card = document.getElementById(`card-${id}`);
-      const feedback = document.getElementById(`feedback-${id}`);
+    activeRecordingIdx = idx;
+    accumulatedTranscript = "";
+    if (speechSilenceTimer) clearTimeout(speechSilenceTimer);
 
-      micBtn.classList.add("listening");
-      micBtn.textContent = "🎙️ 듣는 중...";
+    const btn = document.getElementById(`rec-btn-${idx}`);
+    btn.classList.add("recording");
+    btn.innerHTML = "⏹️ 말하기 완료";
 
-      const recognition = new SpeechRecognition();
-      recognition.lang = "en-US";
-      recognition.interimResults = false;
-      recognition.maxAlternatives = 1;
+    const panel = document.getElementById(`analysis-${idx}`);
+    panel.classList.add("show");
+    document.getElementById(`transcript-${idx}`).innerHTML = `<strong>인식 중...</strong> <span style="color:#0284c7;">말씀해 보세요.</span>`;
 
-      recognition.onresult = function(event) {
-        const spoken = event.results[0][0].transcript;
-        const cleanTarget = targetText.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
-        const cleanSpoken = spoken.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
+    recognition.onresult = (event) => {
+      let interim = "";
+      let final = "";
 
-        micBtn.classList.remove("listening");
-        micBtn.textContent = "말하기 🎤";
-        feedback.style.display = "block";
-
-        if (cleanTarget === cleanSpoken || cleanTarget.includes(cleanSpoken) || cleanSpoken.includes(cleanTarget)) {
-          feedback.className = "feedback-box feedback-success";
-          feedback.innerHTML = `🎉 완벽합니다! (인식: "${spoken}")`;
-          card.classList.add("open", "success-card");
+      for (let i = 0; i < event.results.length; ++i) {
+        if (event.results[i].isFinal) {
+          final += event.results[i][0].transcript + " ";
         } else {
-          feedback.className = "feedback-box feedback-retry";
-          feedback.innerHTML = `💪 내 발음: "${spoken}" (카드를 열어 정답을 확인해보세요)`;
-          card.classList.add("open");
-          card.classList.remove("success-card");
+          interim += event.results[i][0].transcript;
         }
-      };
+      }
 
-      recognition.onerror = function() {
-        micBtn.classList.remove("listening");
-        micBtn.textContent = "말하기 🎤";
-        feedback.style.display = "block";
-        feedback.className = "feedback-box feedback-retry";
-        feedback.textContent = "음성을 인식하지 못했습니다. 다시 시도해 주세요.";
-      };
-      recognition.onend = function() {
-        micBtn.classList.remove("listening");
-        micBtn.textContent = "말하기 🎤";
-      };
-      recognition.start();
-    }
+      accumulatedTranscript = (final + interim).trim();
+      document.getElementById(`transcript-${idx}`).innerHTML = `<strong>인식된 문장:</strong> "${accumulatedTranscript}"`;
 
-    function togglePlayAll() {
-      const item = situationsData[currentIndex];
-      if (!item || !item.dialogues || item.dialogues.length === 0) return;
-      const btn = document.getElementById("playAllBtn");
-      if (isPlayingAll) { stopPlayAll(); return; }
-      isPlayingAll = true; currentPlayIndex = 0;
-      btn.classList.add("playing"); btn.textContent = "⏹ 연속 듣기 정지";
-      playNext();
-    }
-    function stopPlayAll() {
-      isPlayingAll = false;
-      if ("speechSynthesis" in window) window.speechSynthesis.cancel();
-      const btn = document.getElementById("playAllBtn");
-      if (btn) { btn.classList.remove("playing"); btn.textContent = "▶ 대화 연속 듣기"; }
-    }
-    function playNext() {
-      const item = situationsData[currentIndex];
-      if (!isPlayingAll || !item || currentPlayIndex >= item.dialogues.length) { stopPlayAll(); return; }
-      const line = item.dialogues[currentPlayIndex];
-      const card = document.getElementById(`card-d-${currentPlayIndex}`);
-      if (card) { card.classList.add("open"); card.scrollIntoView({ behavior: "smooth", block: "center" }); }
-      speakSentence(line.en, line.role, () => {
-        if (!isPlayingAll) return;
-        currentPlayIndex++;
-        setTimeout(playNext, 500);
-      });
-    }
+      if (speechSilenceTimer) clearTimeout(speechSilenceTimer);
+      speechSilenceTimer = setTimeout(() => {
+        finishSpeaking(idx);
+      }, 3000);
+    };
 
-    initApp();
-  </script>
+    recognition.onerror = (event) => {
+      console.error(event.error);
+      if (event.error !== "no-speech") {
+        alert("음성 인식 오류: " + event.error);
+      }
+      resetRecButton(idx);
+      activeRecordingIdx = null;
+    };
+
+    recognition.onend = () => {
+      if (activeRecordingIdx !== null && accumulatedTranscript) {
+        analyzeSpeech(idx, accumulatedTranscript);
+      }
+      resetRecButton(idx);
+      activeRecordingIdx = null;
+    };
+
+    recognition.start();
+  }
+
+  function finishSpeaking(idx) {
+    if (speechSilenceTimer) clearTimeout(speechSilenceTimer);
+    recognition.stop();
+    resetRecButton(idx);
+    if (accumulatedTranscript) {
+      analyzeSpeech(idx, accumulatedTranscript);
+    }
+    activeRecordingIdx = null;
+  }
+
+  function resetRecButton(idx) {
+    const btn = document.getElementById(`rec-btn-${idx}`);
+    if (btn) {
+      btn.classList.remove("recording");
+      btn.innerHTML = "🎙️ 말하기";
+    }
+  }
+
+  function cleanText(str) {
+    return str.toLowerCase().replace(/[^a-z0-9 ]/g, '').trim();
+  }
+
+  function analyzeSpeech(idx, userSpoken) {
+    const lec = lectures[currentLectureIndex];
+    const targetEn = lec.dialogues[idx].en;
+
+    const targetWords = cleanText(targetEn).split(/\s+/);
+    const spokenWords = cleanText(userSpoken).split(/\s+/);
+
+    let matchCount = 0;
+    const diffHtmlParts = [];
+
+    targetWords.forEach(w => {
+      if (spokenWords.includes(w)) {
+        matchCount++;
+        diffHtmlParts.push(`<span class="match-word">${w}</span>`);
+      } else {
+        diffHtmlParts.push(`<span class="miss-word">${w}</span>`);
+      }
+    });
+
+    const score = Math.round((matchCount / targetWords.length) * 100);
+
+    const panel = document.getElementById(`analysis-${idx}`);
+    panel.classList.add("show");
+
+    const scoreEl = document.getElementById(`score-${idx}`);
+    scoreEl.textContent = `일치도: ${score}%`;
+    scoreEl.className = "score-badge " + (score >= 80 ? "score-high" : score >= 50 ? "score-mid" : "score-low");
+
+    document.getElementById(`transcript-${idx}`).innerHTML = `<strong>인식된 문장:</strong> "${userSpoken}"`;
+    document.getElementById(`diff-${idx}`).innerHTML = `
+      <div style="font-size:0.82rem; color:#64748b; margin-bottom:4px;">목표 문장 대조 (<span style="color:#16a34a">초록: 일치</span>, <span style="color:#dc2626; text-decoration:line-through">빨강: 누락/오류</span>):</div>
+      ${diffHtmlParts.join(" ")}
+    `;
+
+    document.getElementById(`card-${idx}`).classList.add("open");
+  }
+
+  initLectureSelect();
+  renderDialogues();
+</script>
+
 </body>
 </html>
