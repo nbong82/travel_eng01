@@ -2068,5 +2068,2059 @@ const situationsData = [
       { kr: "저희가 조금 늦을 것 같아요.", en: "We’re running a little late." },
       { kr: "취소 수수료가 있나요?", en: "Is there a cancellation fee?" }
     ]
+  },
+  {
+    "id": 60,
+    "title": "음악 소리 좀 줄여주시겠어요?",
+    "category": "택시 · 음악 소리 조절 부탁",
+    "page": "p.159-161",
+    "tip": "소리를 줄일 때는 turn down, 키울 때는 turn up, 끌 때는 turn off예요. 앞에 Could you를 붙이고 끝에 a little을 더하면 부드러운 부탁이 돼요. 에어컨이나 히터도 같은 표현으로 말하면 돼요.",
+    "dialogues": [
+      {
+        "role": "A",
+        "roleLabel": "A (승객)",
+        "kr": "음악 소리 좀 줄여주시겠어요?",
+        "en": "Could you turn the music down a little?",
+        "note": "핵심 표현"
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (승객)",
+        "kr": "살, 이거 오페라예요?",
+        "en": "Sal, is this opera?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (기사)",
+        "kr": "푸치니요. 우리 어머니가 제일 좋아하시던 거예요.",
+        "en": "Puccini. My mother's favorite.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (승객)",
+        "kr": "저기요, 살. 음악 소리 좀 줄여 주시겠어요?",
+        "en": "Excuse me, Sal. Could you turn the music down a little?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (기사)",
+        "kr": "줄여요? 그럼요. 근데 끄는 건 안 돼요. 이 차 규칙이라서요.",
+        "en": "Down? Sure. But I can't turn it off. House rules.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (승객)",
+        "kr": "고마워요. 훨씬 낫네요.",
+        "en": "Thank you. That's much better.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (기사)",
+        "kr": "내가 왜 푸치니 트는지 알아요?",
+        "en": "You know why I play Puccini?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (승객)",
+        "kr": "어머니 때문에요?",
+        "en": "Because of your mother?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (기사)",
+        "kr": "내 사촌 때문이에요.",
+        "en": "Because of my cousin.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (승객)",
+        "kr": "역시 사촌이군요.",
+        "en": "Of course it's your cousin.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (기사)",
+        "kr": "오늘 밤 오페라 하우스에서 노래해요.",
+        "en": "He's singing tonight at the opera house.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (승객)",
+        "kr": "사촌이 오페라 가수예요?",
+        "en": "Your cousin is an opera singer?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (기사)",
+        "kr": "토니 동생이요. 목소리가 커요. 나보다 더.",
+        "en": "Tony's brother. Big voice. Bigger than mine.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (승객)",
+        "kr": "그건 믿기 어려운데요.",
+        "en": "That's hard to believe.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (기사)",
+        "kr": "피자 주문하는 거 한번 들어 봐야 해요.",
+        "en": "You should hear him order a pizza.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (승객)",
+        "kr": "살, 소리 좀 키워 주실래요? 하이라이트 부분만요.",
+        "en": "Sal, could you turn it up a little? Just for the big part?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (기사)",
+        "kr": "이제야 말이 통하네.",
+        "en": "Now you're talking.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (기사)",
+        "kr": "다 왔어요. 18달러 50센트요.",
+        "en": "Here we are. Eighteen fifty.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (승객)",
+        "kr": "잔돈은 가지세요.",
+        "en": "Keep the change.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (기사)",
+        "kr": "기억했네요.",
+        "en": "You remembered.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (승객)",
+        "kr": "최고한테 배웠잖아요.",
+        "en": "I learned from the best.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (기사)",
+        "kr": "자, 표 두 장. 오늘 밤. 내 사촌 공연. 맨 앞줄이에요.",
+        "en": "Hey. Two tickets. Tonight. My cousin's show. Front row.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (승객)",
+        "kr": "살, 이건 못 받아요.",
+        "en": "Sal, we can't take these.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (기사)",
+        "kr": "나랑 20분 동안 푸치니 들었잖아요. 받을 자격 있어요.",
+        "en": "You listened to Puccini with me for twenty minutes. You earned them.",
+        "note": ""
+      }
+    ],
+    "extras": [
+      {
+        "kr": "소리 좀 줄여 주실래요?",
+        "en": "Could you turn it down a bit?"
+      },
+      {
+        "kr": "소리 좀 키워 주실래요?",
+        "en": "Could you turn it up a little?"
+      },
+      {
+        "kr": "소리가 좀 너무 커요.",
+        "en": "It's a little too loud."
+      },
+      {
+        "kr": "음악 좀 꺼 주실래요?",
+        "en": "Could you turn off the music?"
+      },
+      {
+        "kr": "채널 좀 바꿔 주실래요?",
+        "en": "Could you change the station?"
+      },
+      {
+        "kr": "에어컨 좀 세게 해 주실래요?",
+        "en": "Could you turn up the AC?"
+      },
+      {
+        "kr": "창문 좀 올려 주실래요?",
+        "en": "Could you roll up the window?"
+      },
+      {
+        "kr": "훨씬 낫네요, 고마워요.",
+        "en": "Much better, thanks."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "title": "예약을 30분만 미룰 수 있을까요?",
+    "category": "전화 · 식당 예약 시간 미루기",
+    "page": "p.162-164",
+    "tip": "미룰 때는 push back, 앞당길 때는 move up을 써요. 시간을 말할 때는 “push it back thirty minutes”처럼 얼마나 미룰지 말하거나, “to seven thirty”처럼 몇 시로 바꿀지 붙이면 돼요. 59번 '예약을 6시로 앞당겨야 할 때'와 같이 보면 좋아요.",
+    "dialogues": [
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "예약을 30분만 미룰 수 있을까요?",
+        "en": "Could we push our reservation back thirty minutes?",
+        "note": "핵심 표현"
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "에마, 저녁 예약 7시야. 지금 6시 40분이고.",
+        "en": "Emma, dinner is at seven. It's six forty.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "진정해. 거의 다 됐어.",
+        "en": "Relax. I'm almost ready.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "전혀 안 됐거든.",
+        "en": "You are not even close.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (식당)",
+        "kr": "루이지스입니다. 마르코예요.",
+        "en": "Luigi's. Marco speaking.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "안녕하세요! 하나 이름으로 7시에 두 명 예약했는데요. 30분 미뤄서 7시 반으로 할 수 있을까요?",
+        "en": "Hi! I have a reservation for two at seven, under Hana. Could we push it back thirty minutes, to seven thirty?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (식당)",
+        "kr": "7시 반이요? 음, 확인해 볼게요.",
+        "en": "Seven thirty? Hmm. Let me check.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "제발요! 저 지금 완전 엉망이에요.",
+        "en": "Please! I'm a hot mess right now.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (식당)",
+        "kr": "좋아요. 7시 반으로 해 드릴게요. 대신 1분도 늦으시면 안 돼요.",
+        "en": "Okay. Seven thirty, you got it. But not a minute later.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "정말 감사합니다!",
+        "en": "Thank you so much!",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "봐, 별거 아니잖아.",
+        "en": "See? No biggie.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "가. 당장.",
+        "en": "Go. Now.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "다 됐다! 가자. 잠깐. 내 지갑 어디 있지?",
+        "en": "Done! Let's go. Wait. Where's my wallet?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "장난하는 거지?",
+        "en": "You've got to be kidding me.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "다시 전화해 줘. 15분만 더.",
+        "en": "Call him back. Fifteen more minutes.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "또? 딱 15분. 금방 올게.",
+        "en": "Again? Just fifteen. I'll be back.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "안녕하세요, 하나예요. 정말 죄송해요. 15분만 더 미룰 수 있을까요? 7시 45분으로요?",
+        "en": "Hi, it's Hana again. I'm so sorry. Could we push it back fifteen more minutes? To seven forty-five?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (식당)",
+        "kr": "아가씨. 7시였다가 7시 반, 이제는 7시 45분이네요.",
+        "en": "Signorina. Seven, then seven thirty, now seven forty-five.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "알아요, 알아요. 제 잘못이에요.",
+        "en": "I know, I know. My bad.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (식당)",
+        "kr": "좋아요. 7시 45분. 저한테 빚진 거예요.",
+        "en": "Fine. Seven forty-five. You owe me.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "팁 많이 드릴게요. 약속해요.",
+        "en": "I'll leave a big tip. Promise.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (식당)",
+        "kr": "손님들. 주방이 지금 정신없어서요. 10분만 미뤄 주실 수 있을까요?",
+        "en": "Ladies. The kitchen is slammed. Could you push it back ten minutes?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "아, 이제는 그쪽이 미루시는 거예요?",
+        "en": "Oh, so now you're pushing it back?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (식당)",
+        "kr": "뭐, 그럴 수도 있죠.",
+        "en": "Hey. It happens.",
+        "note": ""
+      }
+    ],
+    "extras": [
+      {
+        "kr": "예약을 8시로 옮길 수 있을까요?",
+        "en": "Could we move our reservation to eight?"
+      },
+      {
+        "kr": "20분 정도 늦을 것 같아요.",
+        "en": "We're running about twenty minutes late."
+      },
+      {
+        "kr": "몇 분만 자리 잡아 두실 수 있을까요?",
+        "en": "Could you hold our table for a few minutes?"
+      },
+      {
+        "kr": "조금 더 늦은 시간에 자리 있나요?",
+        "en": "Is there anything available a little later?"
+      },
+      {
+        "kr": "내일로 미룰 수 있을까요?",
+        "en": "Could we push it back to tomorrow?"
+      },
+      {
+        "kr": "번거롭게 해서 죄송해요.",
+        "en": "Sorry for the trouble."
+      },
+      {
+        "kr": "늦으면 추가 요금이 있나요?",
+        "en": "Is there a late fee?"
+      },
+      {
+        "kr": "7시 45분까지 갈게요.",
+        "en": "We'll be there by seven forty-five."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "title": "주방 몇 시에 마감해요?",
+    "category": "식당 · 마감 직전 주문",
+    "page": "p.165-168",
+    "tip": "미국 식당은 주방 마감(kitchen closes)과 영업 종료(closes) 시간이 다른 경우가 많아요. 주방이 닫혀도 바에서는 늦게까지 음식이 되는 곳이 있으니 “Does the bar still serve food?”라고 물어보세요.",
+    "dialogues": [
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "주방 몇 시에 마감해요?",
+        "en": "What time does the kitchen close?",
+        "note": "핵심 표현"
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "아직 주문할 수 있나요?",
+        "en": "Can we still order?",
+        "note": "핵심 표현"
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "에마, 배고파 죽겠어. 세 시간이나 걸었잖아.",
+        "en": "Emma, I'm starving. We walked for three hours.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "그 미술관은 그럴 가치가 있었어.",
+        "en": "That museum was worth it.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "밥. 저기. 당장.",
+        "en": "Food. There. Now.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "곧 10시야. 문 닫을지도 몰라.",
+        "en": "It's almost ten. They might be closing.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "안녕하세요! 주방 몇 시에 마감해요?",
+        "en": "Hi! What time does the kitchen close?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (직원)",
+        "kr": "10시요.",
+        "en": "Ten.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "지금 몇 시예요?",
+        "en": "What time is it now?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (직원)",
+        "kr": "9시 58분이요.",
+        "en": "Nine fifty-eight.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "그럼 괜찮은 거죠?",
+        "en": "So we're good?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (직원)",
+        "kr": "2분 남았어요.",
+        "en": "You have two minutes.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "알겠어요. 아직 주문할 수 있죠?",
+        "en": "Okay, okay. Can we still order?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (직원)",
+        "kr": "마지막 주문이에요. 말씀하세요.",
+        "en": "Last call. Go.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "치즈버거, 감자튀김, 치킨 윙, 그리고 파스타요.",
+        "en": "Cheeseburger, fries, chicken wings, and the pasta.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "그게 두 사람 거야?",
+        "en": "That's for two people?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "내 거야.",
+        "en": "That's for me.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (셰프)",
+        "kr": "샘! 9시 59분에 누가 주문하는 거야?",
+        "en": "Sam! Who's ordering at nine fifty-nine?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (셰프)",
+        "kr": "손님들. 주방은 10시에 닫아요. 10시 1분이 아니라 10시요.",
+        "en": "Ladies. The kitchen closes at ten. Not ten oh one. Ten.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "정말 죄송해요. 세 시간 동안 길을 잃었거든요.",
+        "en": "We're so sorry. We got lost for three hours.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (셰프)",
+        "kr": "세 시간이요? 이 도시에서? 어떻게요?",
+        "en": "Three hours? In this city? How?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (친구)",
+        "kr": "얘가 지도를 거꾸로 보고 다녔어요.",
+        "en": "She was following the map upside down.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "셰프님. 거절할 수 없는 제안을 하나 드리죠.",
+        "en": "Chef. I'm going to make you an offer you can't refuse.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (셰프)",
+        "kr": "그 영화 봤어요.",
+        "en": "I've seen that movie.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "팁 20%. 그리고 빨리 먹을게요.",
+        "en": "Twenty percent tip. And we eat fast.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (셰프)",
+        "kr": "얼마나 빨리요?",
+        "en": "How fast?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "씹는 것도 못 보실 거예요.",
+        "en": "You won't even see us chew.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (셰프)",
+        "kr": "좋아요. 버거 하나, 파스타 하나. 윙은 20분 걸리니까 윙은 안 돼요.",
+        "en": "Fine. One burger, one pasta. The wings take twenty minutes, so no wings.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "윙 안 돼요?",
+        "en": "No wings?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (셰프)",
+        "kr": "저 말고 샘한테 고마워하세요. 늦게까지 남는 건 샘이니까.",
+        "en": "Don't thank me. Thank Sam. He's the one staying late.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (셰프)",
+        "kr": "참고로 주방은 10시에 닫지만, 바에서는 자정까지 음식이 돼요.",
+        "en": "By the way, the kitchen closes at ten, but the bar serves food until midnight.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "바에서 음식이 돼요? 그럼 우리 괜히 뛴 거예요?",
+        "en": "The bar has food? So we ran for nothing?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (셰프)",
+        "kr": "유산소 운동이 좀 필요해 보이셨어요.",
+        "en": "You looked like you needed the cardio.",
+        "note": ""
+      }
+    ],
+    "extras": [
+      {
+        "kr": "몇 시에 문 닫아요?",
+        "en": "What time do you close?"
+      },
+      {
+        "kr": "아직 음식 주문 돼요?",
+        "en": "Are you still serving food?"
+      },
+      {
+        "kr": "마지막 주문은 언제예요?",
+        "en": "When is last call?"
+      },
+      {
+        "kr": "바에서는 아직 음식 돼요?",
+        "en": "Does the bar still serve food?"
+      },
+      {
+        "kr": "심야 메뉴 있나요?",
+        "en": "Is there a late-night menu?"
+      },
+      {
+        "kr": "빨리 되는 게 뭐예요?",
+        "en": "What can you make quickly?"
+      },
+      {
+        "kr": "포장으로 할 수 있을까요?",
+        "en": "Can we get it to go?"
+      },
+      {
+        "kr": "늦게 와서 죄송해요.",
+        "en": "Sorry for coming in so late."
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "title": "주문 바꾸기엔 너무 늦었나요?",
+    "category": "스테이크하우스 · 주문 변경",
+    "page": "p.169-171",
+    "tip": "tartare, carpaccio, crudo, ceviche가 메뉴에 보이면 익히지 않은 요리예요. 주문을 바꾸고 싶으면 주방에서 요리를 시작하기 전에 빨리 “Is it too late to change my order?”라고 물어보세요.",
+    "dialogues": [
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "주문 바꾸기엔 너무 늦었나요?",
+        "en": "Is it too late to change my order?",
+        "note": "핵심 표현"
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "스테이크 타르타르로 할게요. 웰던으로요.",
+        "en": "I'll have the steak tartare. Well done, please.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (서버)",
+        "kr": "웰던이요.",
+        "en": "Well done.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "네. 아주 바싹이요.",
+        "en": "Yes. Very well done.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (서버)",
+        "kr": "알겠습니다.",
+        "en": "Of course.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "저도 이분이랑 같은 걸로요.",
+        "en": "I'll have what she's having.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "잠깐. 너 스테이크 타르타르가 뭔지 알아?",
+        "en": "Wait. Do you know what steak tartare is?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "스테이크지. 이름만 멋있는.",
+        "en": "A steak. Fancy name.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "날고기야. 다진 생소고기에 날달걀까지 올라가.",
+        "en": "It's raw. Raw chopped beef. With a raw egg on top.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "날고기라고?",
+        "en": "Raw?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "저기요. 주문 바꾸기엔 너무 늦었나요?",
+        "en": "Excuse me. Is it too late to change my order?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (서버)",
+        "kr": "상황에 따라 다르죠. 타르타르가 왜요?",
+        "en": "That depends. What's wrong with the tartare?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "익힌 건 줄 알았어요.",
+        "en": "I thought it was cooked.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (서버)",
+        "kr": "그래서 웰던으로 달라고 하셨군요. 손님, 타르타르는 항상 날것이에요.",
+        "en": "You asked for it well done. Madam, tartare always means raw.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (서버)",
+        "kr": "셰프가 시작했는지 확인해 볼게요.",
+        "en": "Let me check if the chef has started.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (서버)",
+        "kr": "운이 좋으시네요. 셰프가 아직 시작 안 했어요.",
+        "en": "You're in luck. The chef hasn't started yet.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "감사해요! 립아이로 바꿀 수 있을까요? 미디엄으로요.",
+        "en": "Thank you! Can I change it to the ribeye? Medium, please.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (서버)",
+        "kr": "립아이, 미디엄. 훨씬 안전하죠.",
+        "en": "Ribeye, medium. Much safer.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "저는 이분이랑 같은 걸로 한다고 했잖아요. 아니, 아니요. 사실 저는 타르타르가 먹고 싶었어요.",
+        "en": "I said I'll have what she's having. No, no. I actually wanted the tartare.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (서버)",
+        "kr": "그럼 왜 같은 걸로 달라고 하셨어요?",
+        "en": "Then why did you say what she's having?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "영화 대사예요. 멋있어 보였거든요.",
+        "en": "It's from a movie. It sounded cool.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (서버)",
+        "kr": "전혀요.",
+        "en": "It did not.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "내 잘못이야. 내가 일을 벌였네.",
+        "en": "My bad. I started all this.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "이거 진짜 맛있어. 한 입만 먹어 봐.",
+        "en": "This is amazing. Try one bite.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "절대 사양.",
+        "en": "Hard pass.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "한 입만. 용기 내 봐.",
+        "en": "One bite. Be brave.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "어떡해. 너무 맛있어. 저기요. 주문 바꾸기엔 너무 늦었나요?",
+        "en": "Oh no. It's so good. Excuse me. Is it too late to change my order?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (서버)",
+        "kr": "손님. 네. 늦었습니다.",
+        "en": "Madam. Yes. It is.",
+        "note": ""
+      }
+    ],
+    "extras": [
+      {
+        "kr": "주문 바꿀 수 있을까요?",
+        "en": "Can I change my order?"
+      },
+      {
+        "kr": "치킨으로 바꿀 수 있을까요?",
+        "en": "Could I switch to the chicken?"
+      },
+      {
+        "kr": "주방에서 벌써 만들기 시작했나요?",
+        "en": "Has the kitchen started on it yet?"
+      },
+      {
+        "kr": "이 요리는 익힌 건가요?",
+        "en": "Is this dish cooked?"
+      },
+      {
+        "kr": "이건 날것으로 나오나요?",
+        "en": "Is this served raw?"
+      },
+      {
+        "kr": "미디엄 레어로 해 주세요.",
+        "en": "Medium rare, please."
+      },
+      {
+        "kr": "디저트는 취소할 수 있을까요?",
+        "en": "Can I cancel the dessert?"
+      },
+      {
+        "kr": "번거롭게 해서 죄송해요.",
+        "en": "Sorry for the trouble."
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "title": "짐 좀 맡겨도 될까요?",
+    "category": "호텔 · 체크아웃 후 짐 보관",
+    "page": "p.172-174",
+    "tip": "체크아웃 후에도 짐을 무료로 맡아 주는 호텔이 많아요. 보관증(claim ticket)은 꼭 챙기고, 호텔 이름과 주소는 사진으로 찍어 두세요. 짐을 찾을 때는 “I'm here to pick up my luggage.”라고 하면 돼요.",
+    "dialogues": [
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "오늘 밤까지 짐 좀 맡아 주시겠어요?",
+        "en": "Could you hold our luggage until tonight?",
+        "note": "핵심 표현"
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "체크아웃은 했는데 비행기가 밤 9시야.",
+        "en": "We checked out, but our flight is at nine tonight.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "도시에서 여섯 시간 더 놀 수 있어!",
+        "en": "Six more hours in the city!",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "이걸 하루 종일 끌고 다닐 순 없잖아.",
+        "en": "We can't drag these around all day.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "그럼 어떡해?",
+        "en": "Then what do we do?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "안녕하세요! 방금 체크아웃했는데요. 오늘 밤까지 짐 좀 맡아 주시겠어요?",
+        "en": "Hi! We just checked out. Could you hold our luggage until tonight?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (벨보이)",
+        "kr": "문제없어요. 가방 몇 개예요?",
+        "en": "No sweat. How many bags?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "두 개요.",
+        "en": "Two.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (벨보이)",
+        "kr": "보관증이에요. 잃어버리지 마세요.",
+        "en": "Here's your claim ticket. Don't lose it.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "저 아무것도 안 잃어버려요.",
+        "en": "I never lose anything.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "얘 여권 두 번 잃어버렸어요.",
+        "en": "She lost her passport twice.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (벨보이)",
+        "kr": "11시 전에만 오세요. 제가 그때 퇴근해요.",
+        "en": "Just come back before eleven. That's when I leave.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "알겠어요. 고마워요, 레오!",
+        "en": "You got it. Thanks, Leo!",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "오늘 최고야. 손이 자유로우니 마음도 자유롭다.",
+        "en": "This is the best day. Free hands, free hearts.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "에마. 우리 호텔 이름이 뭐였지?",
+        "en": "Emma. What was the name of our hotel?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "나무 이름이었는데. 오크? 메이플?",
+        "en": "It was something with a tree. Oak? Maple?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "아니야, 색깔이었어. 블루 뭐였는데.",
+        "en": "No, it was a color. The Blue something.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "그건 호텔이 아니라 팬케이크 가게야.",
+        "en": "That's not a hotel. That's a pancake place.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "그래, 하나도 기억 안 나. 내 잘못이야. 보관증엔 번호만 있어. 42번.",
+        "en": "Okay, total blank. My bad. The ticket just has a number. Forty-two.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "여권이 그 가방 안에 있어.",
+        "en": "Our passports are in those bags.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (벨보이)",
+        "kr": "손님들! 뭐 잊으셨어요?",
+        "en": "Ladies! Forgot something?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "호텔 이름을 잊어버렸어요.",
+        "en": "We forgot the name of the hotel.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (벨보이)",
+        "kr": "10미터 걸어가셨잖아요. 걱정 마세요, 가방은 안전해요. 다 괜찮아요.",
+        "en": "You walked thirty feet. Don't worry, your bags are safe. We're golden.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "레오, 당신은 생명의 은인이에요.",
+        "en": "Leo, you're a lifesaver.",
+        "note": ""
+      }
+    ],
+    "extras": [
+      {
+        "kr": "가방 여기 맡겨도 될까요?",
+        "en": "Can I leave my bags here?"
+      },
+      {
+        "kr": "짐 보관료가 있나요?",
+        "en": "Is there a fee for storing luggage?"
+      },
+      {
+        "kr": "몇 시까지 찾으러 와야 해요?",
+        "en": "What time do I need to pick them up?"
+      },
+      {
+        "kr": "짐 찾으러 왔어요.",
+        "en": "I'm here to pick up my luggage."
+      },
+      {
+        "kr": "여기 보관증이요.",
+        "en": "Here's my claim ticket."
+      },
+      {
+        "kr": "일찍 체크인할 수 있을까요?",
+        "en": "Can I check in early?"
+      },
+      {
+        "kr": "체크아웃을 늦게 할 수 있을까요?",
+        "en": "Could I get a late checkout?"
+      },
+      {
+        "kr": "택시 좀 불러 주시겠어요?",
+        "en": "Could you call a taxi for me?"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "title": "방을 옮겨도 될까요?",
+    "category": "호텔 · 방 바꾸기",
+    "page": "p.175-177",
+    "tip": "방이 마음에 안 들면 체크인 직후에 바로 말하는 게 좋아요. “The view isn't what I booked.”처럼 이유를 짧게 덧붙이면 더 잘 들어줘요. 방을 옮길 때는 침대 개수도 꼭 확인하세요.",
+    "dialogues": [
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "방을 옮겨도 될까요?",
+        "en": "Could we switch rooms?",
+        "note": "핵심 표현"
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "시티 뷰 방! 이거 돈 더 냈어. 음. 뷰는 뷰네. 벽 뷰.",
+        "en": "City view room! I paid extra for this. Well. It's a view. Of a wall.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "도시의 벽이잖아. 엄밀히 말하면 시티 뷰야.",
+        "en": "A city wall. Technically city view.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "안녕하세요. 312호인데요. 방을 옮겨도 될까요?",
+        "en": "Hi. We're in room three twelve. Could we switch rooms?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (직원)",
+        "kr": "312호가 왜요?",
+        "en": "What's wrong with three twelve, honey?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "시티 뷰로 예약했는데 창밖이 벽돌담이에요.",
+        "en": "I booked a city view. The view is a brick wall.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (직원)",
+        "kr": "아, 그 벽. 그 벽은 다들 알아요. 어떤 방이 있는지 볼게요. 방이 하나 남았어요. 꼭대기 층. 진짜 뷰.",
+        "en": "Oh, that wall. Everybody knows about the wall. Let me see what I've got. I've got one room left. Top floor. Real view.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "네! 그걸로요! 글로리아, 최고예요.",
+        "en": "Yes! Please! Gloria, you rock.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (직원)",
+        "kr": "2101호예요. 그런데 그 방에 아주 작은 문제가 하나 있는데요.",
+        "en": "Room twenty-one oh one. But there's one tiny thing about that room.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "그걸로 할게요!",
+        "en": "We'll take it!",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (직원)",
+        "kr": "아직 말 안 끝났어요!",
+        "en": "You didn't let me finish!",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "말도 안 돼. 와, 글로리아가 제대로 챙겨 줬다. 이 뷰 좀 봐! 이건 내가 묵어 본 방 중에 최고야.",
+        "en": "No way. Okay, Gloria hooked us up big time. Look at this view! This is the best room I've ever had.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "침대가 하나야. 아주 작은 침대 하나. 내 거 찜.",
+        "en": "One bed. One very small bed. Dibs.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "하나밖에 없는 침대를 찜하면 어떡해!",
+        "en": "You can't call dibs on the only bed!",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "방금 했는데.",
+        "en": "I just did.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (직원)",
+        "kr": "프런트입니다. 맞혀 볼게요. 침대죠.",
+        "en": "Front desk. Let me guess. The bed.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "방을 한 번 더 옮길 수 있을까요?",
+        "en": "Could we switch rooms again?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (직원)",
+        "kr": "손님, 그게 마지막 방이었어요.",
+        "en": "Honey, that was the last room.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (투숙객)",
+        "kr": "뷰는 크고 침대는 작네. 아쉽다.",
+        "en": "Big view, small bed. Bummer.",
+        "note": ""
+      }
+    ],
+    "extras": [
+      {
+        "kr": "더 높은 층 방으로 받을 수 있을까요?",
+        "en": "Could I get a room on a higher floor?"
+      },
+      {
+        "kr": "전망이 더 좋은 방 있나요?",
+        "en": "Is there a room with a better view?"
+      },
+      {
+        "kr": "예약한 뷰가 아니에요.",
+        "en": "The view isn't what I booked."
+      },
+      {
+        "kr": "침대 두 개짜리 방으로 받을 수 있을까요?",
+        "en": "Could we get a room with two beds?"
+      },
+      {
+        "kr": "추가 요금이 있나요?",
+        "en": "Is there an extra charge?"
+      },
+      {
+        "kr": "방에서 담배 냄새가 나요.",
+        "en": "The room smells like smoke."
+      },
+      {
+        "kr": "에어컨이 안 돼요.",
+        "en": "The air conditioner isn't working."
+      },
+      {
+        "kr": "짐 좀 옮겨 주실 수 있을까요?",
+        "en": "Could someone help me with my bags?"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "title": "이거 작은 사이즈 있나요?",
+    "category": "옷가게 · 사이즈 문의",
+    "page": "p.178-180",
+    "tip": "미국 옷은 한국보다 한두 치수 커요. 한국에서 M이면 미국에서는 S나 XS를 먼저 입어 보세요. 체구가 작다면 아동복 코너(kids' section)의 XL도 잘 맞고 가격도 더 싸요.",
+    "dialogues": [
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "이거 작은 사이즈 있나요?",
+        "en": "Do you have this in a smaller size?",
+        "note": "핵심 표현"
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "이거 너무 귀엽다. 살래.",
+        "en": "This is so cute. I'm getting it.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "그거 무슨 사이즈야?",
+        "en": "What size is that?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "스몰. 난 항상 스몰이야.",
+        "en": "Small. I'm always a small.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "그건 후드티가 아니라 텐트야.",
+        "en": "That's not a hoodie. That's a tent.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "저기요. 이거 더 작은 사이즈 있나요?",
+        "en": "Excuse me. Do you have this in a smaller size?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (점원)",
+        "kr": "그게 스몰이에요.",
+        "en": "That is a small.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "알아요. 엑스스몰 있나요?",
+        "en": "I know. Do you have an extra small?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (점원)",
+        "kr": "스몰이 저희 매장에서 제일 작은 사이즈예요. 요즘은 오버사이즈가 대세예요.",
+        "en": "Small is the smallest we carry. Oversized is the vibe right now.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "이 후드티 진짜 갖고 싶었는데.",
+        "en": "I really wanted this hoodie.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (다른점원)",
+        "kr": "쉿. 손님들. 따라오세요.",
+        "en": "Psst. Ladies. Follow me.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "잠깐. 여기 아동복 코너예요?",
+        "en": "Wait. Is this the kids' section?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (다른점원)",
+        "kr": "엄밀히 말하면요. 그런데 우리끼리 얘기지만, 손님 절반이 여기서 사요. 아동복 엑스라지요.",
+        "en": "Technically, yes. But between us, half my customers shop here. Kids' extra large.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "저 다 큰 어른인데요.",
+        "en": "I'm a grown woman.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "텐트 입은 어른이지. 입어 봐.",
+        "en": "You're a grown woman in a tent. Try it on.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "와. 완전 딱 맞는다. 진짜 맞아!",
+        "en": "Okay. That fits like a glove. It actually fits!",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (다른점원)",
+        "kr": "잘 어울려요. 아동복 가격이에요. 어른 옷의 반값이에요.",
+        "en": "You're rocking it. Kids' prices. It's half the price of the adult one.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "반값이요. 완전 득템이죠. 똑같은 후드티. 반값. 더 잘 맞고. 아동복 코너가 진짜 명품관이네.",
+        "en": "Half. Total steal. Same hoodie. Half price. Fits better. The kids' section is the real luxury section.",
+        "note": ""
+      }
+    ],
+    "extras": [
+      {
+        "kr": "이거 미디엄 있나요?",
+        "en": "Do you have this in a medium?"
+      },
+      {
+        "kr": "더 큰 사이즈 있나요?",
+        "en": "Do you have a bigger size?"
+      },
+      {
+        "kr": "이거 입어 봐도 될까요?",
+        "en": "Can I try this on?"
+      },
+      {
+        "kr": "탈의실이 어디예요?",
+        "en": "Where are the fitting rooms?"
+      },
+      {
+        "kr": "조금 너무 커요.",
+        "en": "It's a little too big."
+      },
+      {
+        "kr": "이거 다른 색 있나요?",
+        "en": "Do you have this in another color?"
+      },
+      {
+        "kr": "환불 규정이 어떻게 돼요?",
+        "en": "What's your return policy?"
+      },
+      {
+        "kr": "이걸로 할게요.",
+        "en": "I'll take this one."
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "title": "북한이요, 남한이요?",
+    "category": "택시 · 출신 국가 스몰토크",
+    "page": "p.181-183",
+    "tip": "미국에서 “North or South?”는 대부분 가볍게 던지는 농담이에요. 웃으면서 “South, of course!”라고 답하면 돼요. 도시까지 말하고 싶다면 “I'm from Daegu, South Korea.”처럼 작은 단위부터 말하세요.",
+    "dialogues": [
+      {
+        "role": "A",
+        "roleLabel": "A (승객)",
+        "kr": "저는 남한에서 왔어요.",
+        "en": "I'm from South Korea.",
+        "note": "핵심 표현"
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (기사)",
+        "kr": "어디서 오셨어요?",
+        "en": "Where are you from?",
+        "note": "핵심 표현"
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (기사)",
+        "kr": "그래서, 어디서 오셨어요?",
+        "en": "So, where are you from?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (승객)",
+        "kr": "한국이요.",
+        "en": "Korea.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (기사)",
+        "kr": "한국! 북한이요, 남한이요?",
+        "en": "Korea! North or South?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (승객)",
+        "kr": "저는 남한에서 왔어요. 다들 그걸 물어봐요. 오늘만 다섯 번이에요. 제가 셌어요.",
+        "en": "I'm from South Korea. Everybody asks that. Five times today. I counted.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (기사)",
+        "kr": "에이, 그럼 물어보면 뭐라고 해요?",
+        "en": "Come on, what do you say when they ask?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (승객)",
+        "kr": "생각해 보세요. 제가 북한에서 왔으면 이 택시에 타고 있겠어요?",
+        "en": "Think about it. If I were from the North, would I be sitting in your taxi?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (기사)",
+        "kr": "그거 티셔츠에 새겨야겠네요. 한 번만 더. 북한이요, 남한이요?",
+        "en": "You should put that on a T-shirt. One more time. North or South?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (승객)",
+        "kr": "한 번만 더 말해 봐요. 어디 한번.",
+        "en": "Say it again. I dare you.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (기사)",
+        "kr": "좋아요, 고백할 게 있어요. 차이는 알아요. 제 아내가 한국 사람이거든요. 20년 됐어요.",
+        "en": "Alright, I have a confession. I know the difference. My wife is Korean. Twenty years.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (승객)",
+        "kr": "아내분이 한국 사람이에요? 그럼 그냥 장난친 거예요?",
+        "en": "Your wife is Korean? So you were just messing with her?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (기사)",
+        "kr": "뉴욕이 원래 이래요. 아내분은 어디 출신이세요?",
+        "en": "Welcome to New York. Where is she from?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (기사)",
+        "kr": "대구라는 도시요.",
+        "en": "A city called Daegu.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (승객)",
+        "kr": "저 대구에서 왔어요! 말도 안 돼! 세상 참 좁네요!",
+        "en": "I'm from Daegu! No way! Small world!",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (기사)",
+        "kr": "아프리카보다 덥다던데요. 안녕하세요.",
+        "en": "She says it's hotter than Africa. Annyeonghaseyo.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (승객)",
+        "kr": "한국어 완벽하세요!",
+        "en": "Your Korean is perfect!",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (기사)",
+        "kr": "아는 말이 이거 하나예요. 20년 동안.",
+        "en": "That's the only word I know. Twenty years.",
+        "note": ""
+      }
+    ],
+    "extras": [
+      {
+        "kr": "저는 한국 대구에서 왔어요.",
+        "en": "I'm from Daegu, South Korea."
+      },
+      {
+        "kr": "당연히 남한이죠.",
+        "en": "South, of course."
+      },
+      {
+        "kr": "한국에 가 보신 적 있어요?",
+        "en": "Have you ever been to Korea?"
+      },
+      {
+        "kr": "뉴욕은 처음이세요?",
+        "en": "Is this your first time in New York?"
+      },
+      {
+        "kr": "택시 운전하신 지 얼마나 되셨어요?",
+        "en": "How long have you been driving a taxi?"
+      },
+      {
+        "kr": "언젠가 한국에 꼭 가 보세요.",
+        "en": "You should visit Korea someday."
+      },
+      {
+        "kr": "대구는 더운 여름으로 유명해요.",
+        "en": "Daegu is famous for its hot summers."
+      },
+      {
+        "kr": "얘기 나눠서 즐거웠어요.",
+        "en": "It was nice talking to you."
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "title": "이거 4등분 해주시겠어요?",
+    "category": "길거리 음식 · 나눠 먹기",
+    "page": "p.184-186",
+    "tip": "미국 길거리 음식은 양이 정말 많아요. 나눠 먹을 때는 “Could you cut this in half?” (반으로), “into four pieces” (네 조각으로)처럼 숫자만 바꿔서 말하면 돼요. 남은 음식을 나눠 줄 때는 “Would you like a piece?”가 자연스러워요.",
+    "dialogues": [
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "이거 4등분 해주시겠어요?",
+        "en": "Could you cut this into four pieces?",
+        "note": "핵심 표현"
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "배고파서 예민해졌어. 말 한 마리도 먹겠어.",
+        "en": "I'm so hangry. I could eat a horse.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (주민)",
+        "kr": "그럼 빅 토니를 드셔야죠. 뉴욕 최고의 샌드위치예요.",
+        "en": "Then you want the Big Tony. Best sandwich in New York.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "빅 토니 하나 주세요.",
+        "en": "One Big Tony, please.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (친구)",
+        "kr": "이건 샌드위치가 아니라 가구야.",
+        "en": "That's not a sandwich. That's furniture.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "이거 4등분 해주시겠어요?",
+        "en": "Could you cut this into four pieces?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (주인)",
+        "kr": "네 조각이요? 몇 분이 드실 건데요?",
+        "en": "Four? For how many people?",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "두 명이요. 작게 자르면 죄책감 제로잖아요.",
+        "en": "Two. Small pieces, zero guilt.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (주인)",
+        "kr": "아가씨, 칼로리는 그렇게 계산하는 게 아니에요.",
+        "en": "Sweetheart, that's not how calories work.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (주인)",
+        "kr": "네 조각. 완벽하게 똑같이. 끝내주죠.",
+        "en": "Four pieces. Perfectly even. Chef's kiss.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "세상에. 이거 진짜 맛있다. 인정. 완전 반했어. 에마. 우리 이거 다 못 먹어. 나눠 먹으면 좋잖아.",
+        "en": "Oh my gosh. This is legit. Okay. I'm sold. Emma. We can't finish this. Sharing is caring.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "저기요. 한 조각 드실래요?",
+        "en": "Excuse me. Would you like a piece?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (행인)",
+        "kr": "진짜요? 좋죠. 감사해요!",
+        "en": "For real? Bet. Thank you!",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (주인)",
+        "kr": "저요? 제가 만든 건데요.",
+        "en": "For me? I made it.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "직접 만든 샌드위치를 안 드셔 보셨어요?",
+        "en": "You've never tried your own sandwich?",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (주인)",
+        "kr": "20년 동안이요. 먹을 시간이 없었어요. 와. 나 잘하네. 하나 더 만들어 드릴게요. 서비스예요.",
+        "en": "Twenty years. Never had time. Wow. I'm good. I'm down to make another one. On the house.",
+        "note": ""
+      },
+      {
+        "role": "A",
+        "roleLabel": "A (손님)",
+        "kr": "이번엔 여덟 조각으로 잘라 주세요. 더 작게 자르면 죄책감도 더 줄잖아요.",
+        "en": "This time, cut it into eight. Smaller pieces, even less guilt.",
+        "note": ""
+      },
+      {
+        "role": "B",
+        "roleLabel": "B (주인)",
+        "kr": "칼로리는 여전히 그렇게 계산하는 게 아니라니까요!",
+        "en": "That's still not how calories work!",
+        "note": ""
+      }
+    ],
+    "extras": [
+      {
+        "kr": "이거 반으로 잘라 주시겠어요?",
+        "en": "Could you cut this in half?"
+      },
+      {
+        "kr": "접시 하나 더 주시겠어요?",
+        "en": "Could we get an extra plate?"
+      },
+      {
+        "kr": "이거 나눠 먹을 거예요.",
+        "en": "We're going to share this."
+      },
+      {
+        "kr": "냅킨 좀 주시겠어요?",
+        "en": "Could I get some napkins?"
+      },
+      {
+        "kr": "남은 거 싸 주시겠어요?",
+        "en": "Could you wrap the rest?"
+      },
+      {
+        "kr": "이 샌드위치에 뭐 들어가요?",
+        "en": "What's in this sandwich?"
+      },
+      {
+        "kr": "양파 빼고 주실 수 있어요?",
+        "en": "Can I get it without onions?"
+      },
+      {
+        "kr": "크기가 어느 정도예요?",
+        "en": "How big is it?"
+      }
+    ]
+  },
+  {
+    id: 69,
+    title: "비행기 옆자리에서 영어로 말을 걸었다.",
+    category: "기내 · 대화 정중하게 끝내기",
+    page: "p.187-189",
+    tip: "대화를 끊을 때는 먼저 “It was nice talking to you.”로 고마움을 표현하고, 이유를 붙이면 전혀 무례하지 않아요. 비행기, 기차, 버스 어디서든 쓸 수 있어요. 더 짧게는 “I'm going to rest a bit.”도 돼요.",
+    dialogues: [
+      { role: "A", roleLabel: "A (승객)", kr: "얘기 즐거웠는데, 저 좀 자 볼게요.", en: "It was nice talking to you, but I'm going to try to get some sleep.", note: "핵심 표현" },
+      { role: "A", roleLabel: "A (승객)", kr: "드디어. 세 시간 잘 수 있다.", en: "Finally. Three hours of sleep.", note: "" },
+      { role: "B", roleLabel: "B (옆승객)", kr: "마이애미 처음이세요? 아, 정말 좋아하실 거예요. 저는 30년째 다니고 있어요. 다 알려 드릴게요.", en: "First time to Miami? Oh, you're gonna love it. I've been going for thirty years. Let me tell you everything.", note: "" },
+      { role: "B", roleLabel: "B (옆승객)", kr: "우리 엄마가 늘 그러셨죠. 인생은 초콜릿 상자 같다고. 뭘 고를지 아무도 모르니까요!", en: "My mama always said, life is like a box of chocolates. You never know what you're gonna get!", note: "" },
+      { role: "A", roleLabel: "A (승객)", kr: "포레스트 검프네요. 좋아요. 감사합니다.", en: "Forrest Gump. Nice. Thank you.", note: "" },
+      { role: "B", roleLabel: "B (옆승객)", kr: "그래서, 마이애미엔 무슨 일로 가세요?", en: "So, what brings you to Miami?", note: "" },
+      { role: "A", roleLabel: "A (승객)", kr: "얘기 정말 즐거웠는데, 저 좀 자 볼게요.", en: "It was really nice talking to you, but I'm going to try to get some sleep.", note: "" },
+      { role: "B", roleLabel: "B (옆승객)", kr: "물론이죠! 편하게 하세요. 하나만 물어볼게요. 쿠바 커피 드셔 보셨어요?", en: "Of course! You do you. Quick question. Have you tried Cuban coffee?", note: "" },
+      { role: "A", roleLabel: "A (승객)", kr: "아니요, 쿠바 커피는 안 마셔 봤어요.", en: "No, I haven't tried Cuban coffee.", note: "" },
+      { role: "B", roleLabel: "B (옆승객)", kr: "아, 꼭 드셔 보세요. 간단히 말하면, 1998년에 하루에 여섯 잔을 마셨거든요.", en: "Oh, you have to. Long story short, I drank six cups in one day in 1998.", note: "" },
+      { role: "A", roleLabel: "A (승객)", kr: "월터. 저 완전 지쳤어요. 진짜 자야 해요.", en: "Walter. I'm beat. I really need to crash.", note: "" },
+      { role: "B", roleLabel: "B (옆승객)", kr: "더 말 안 하셔도 돼요. 푹 주무세요.", en: "Say no more. Sleep tight.", note: "" },
+      { role: "A", roleLabel: "A (승객)", kr: "월터? 정말 잘 잤어요. 감사해요.", en: "Walter? I slept so well. Thank you.", note: "" },
+      { role: "B", roleLabel: "B (친구)", kr: "너 자고 2분 뒤에 저분도 잠들었어.", en: "He fell asleep two minutes after you did.", note: "" },
+      { role: "A", roleLabel: "A (승객)", kr: "근데 이제 쿠바 커피 얘기가 듣고 싶은데. 월터. 마이애미엔 무슨 일로 가세요?", en: "But now I want to hear about the Cuban coffee. Walter. What brings you to Miami?", note: "" },
+      { role: "B", roleLabel: "B (옆승객)", kr: "초콜릿.", en: "Chocolates.", note: "" }
+    ],
+    extras: [
+      { kr: "어디 가세요?", en: "Where are you headed?" },
+      { kr: "비행기 처음 타세요?", en: "Is this your first time flying?" },
+      { kr: "의자 좀 뒤로 젖혀도 될까요?", en: "Do you mind if I recline my seat?" },
+      { kr: "담요 하나 주시겠어요?", en: "Could I get a blanket?" },
+      { kr: "죄송한데 좀 지나가도 될까요?", en: "Excuse me, could I get by?" },
+      { kr: "좀 쉴게요.", en: "I'm going to rest a bit." },
+      { kr: "밀린 일을 좀 해야 해서요.", en: "I need to catch up on some work." },
+      { kr: "착륙 전에 또 얘기해요.", en: "Let's talk again before we land." }
+    ]
+  },
+  {
+    id: 70,
+    title: "리틀 하바나에서 커피를 영어로 시켰다.",
+    category: "마이애미 · 쿠바 커피 주문",
+    page: "p.190-193",
+    tip: "리틀 하바나는 마이애미의 쿠바 이민자 동네라 스페인어로 먼저 인사하는 곳이 많아요. 그럴 땐 “Do you speak English?”라고 물어보세요. 쿠바 커피(cafecito)는 아주 달고 진하며, 큰 컵(colada)은 여럿이 나눠 마시는 거예요.",
+    dialogues: [
+      { role: "A", roleLabel: "A (손님)", kr: "뭐가 맛있어요? / 추천해 주시겠어요?", en: "What do you recommend?", note: "핵심 표현" },
+      { role: "A", roleLabel: "A (손님)", kr: "영어 하세요?", en: "Do you speak English?", note: "핵심 표현" },
+      { role: "B", roleLabel: "B (직원)", kr: "안녕하세요, 뭐 드릴까요?", en: "Hola, mi amor! ¿Qué quieres?", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "영어 하세요?", en: "Do you speak English?", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "그럼요. 여긴 마이애미예요. 뭐 드릴까요?", en: "Of course, baby. This is Miami. What do you want?", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "뭐가 맛있어요?", en: "What do you recommend?", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "카페시토. 쿠바 커피요. 마이애미 최고예요.", en: "Cafecito. Cuban coffee. Best in Miami.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "얼마예요? 2달러요? 완전 싸다. 이거 시음용이에요?", en: "How much? Two dollars? That's a steal. Is this a sample?", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "그게 한 잔이에요. 컵은 작아도 힘은 세다.", en: "That's a full cup, mi amor. Small cup, big power.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "엄청 달아요! 덜 달게 해 주실 수 있어요?", en: "It's so sweet! Can I get it less sweet?", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "그게 포인트예요. 이게 덜 단 거예요.", en: "That's the point, baby. Baby, this IS less sweet.", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "자, 콜라다예요. 쿠바 커피는 혼자 마시는 게 아니라 나눠 마시는 거예요. 당신의 눈동자에 건배.", en: "Here. A colada. You don't drink Cuban coffee alone. You share it. Here's looking at you, kid.", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "조심해요. 처음 마시는 사람한테 두 잔은 많아요.", en: "Careful, mi amor. Two cafecitos is a lot for a beginner.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "괜찮아요. 완전 괜찮아요.", en: "I'm fine. I'm totally fine.", note: "" },
+      { role: "B", roleLabel: "B (친구)", kr: "너 눈 떨려. 너 월터 됐어.", en: "Your eye is twitching. You're Walter.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "에마, 쿠바 커피 마셔 봤어? 진짜 대박이야. 간단히 말하면 나 방금 두 잔 마셨거든. 다 얘기해 줄게.", en: "Emma, have you tried Cuban coffee? It's amazing. Long story short, I just drank two cups. Let me tell you everything.", note: "" }
+    ],
+    extras: [
+      { kr: "여기서 뭐가 인기 있어요?", en: "What's popular here?" },
+      { kr: "그걸로 할게요.", en: "I'll go with that." },
+      { kr: "이 둘은 뭐가 달라요?", en: "What's the difference between these two?" },
+      { kr: "진해요?", en: "Is it strong?" },
+      { kr: "우유 넣어서 주실 수 있어요?", en: "Can I get it with milk?" },
+      { kr: "더 큰 컵으로 주실 수 있어요?", en: "Could I get a bigger cup?" },
+      { kr: "카드 돼요?", en: "Can I pay by card?" },
+      { kr: "죄송해요, 스페인어를 못해요.", en: "Sorry, I don't speak Spanish." }
+    ]
+  },
+  {
+    id: 71,
+    title: "렌터카 보험 영어로 거절했다.",
+    category: "렌터카 카운터 · 추가 옵션 거절",
+    page: "p.194-197",
+    tip: "미국 렌터카 카운터는 보험, GPS, 선불 주유 같은 옵션을 계속 권해요. 먼저 “Is that optional?”으로 필수인지 확인하고, 필요 없으면 “I'll pass.”로 거절하면 돼요. 단, 신용카드나 여행자 보험으로 보장되는지는 출발 전에 꼭 확인하세요.",
+    dialogues: [
+      { role: "A", roleLabel: "A (손님)", kr: "보험은 괜찮아요. (안 들게요)", en: "I'll pass on the insurance.", note: "핵심 표현" },
+      { role: "A", roleLabel: "A (손님)", kr: "그거 선택 사항이에요?", en: "Is that optional?", note: "핵심 표현" },
+      { role: "B", roleLabel: "B (직원)", kr: "마이애미에 오신 걸 환영해요! 준비 다 됐어요. 소형차, 3일이요.", en: "Welcome to Miami! You're all set. Compact car, three days.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "좋아요, 감사합니다!", en: "Perfect, thank you!", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "그럼. 종합 보험 드시겠어요?", en: "Now. Would you like full coverage insurance?", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "얼마예요?", en: "How much is it?", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "하루에 40달러밖에 안 해요.", en: "Only $40 a day.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "그거 선택 사항이에요?", en: "Is that optional?", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "엄밀히 말하면, 네.", en: "Technically, yes.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "그럼 보험은 안 들게요.", en: "Then I'll pass on the insurance.", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "좋아요! GPS는요? 하루에 15달러예요.", en: "Okay! How about GPS? Only $15 a day.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "휴대폰 있어요. 괜찮아요.", en: "I have my phone. I'll pass.", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "선불 주유는요?", en: "Prepaid fuel?", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "괜찮아요.", en: "I'll pass.", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "긴급 출동 서비스는요?", en: "Roadside assistance?", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "패스.", en: "Pass.", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "좋아요. 마지막. 코코넛 보호 상품.", en: "Okay. Last one. Coconut protection.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "그런 게 어디 있어요.", en: "That's not a real thing.", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "알겠어요. 차는 C열에 있어요. 행운을 빌어요.", en: "Fine. Your car's in row C. Good luck out there.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "고마워요, 채드. 괜찮을 거예요.", en: "Thanks, Chad. We'll be fine.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "하루 40달러 아꼈다. 나 천재야.", en: "$40 a day saved. I'm a genius.", note: "" },
+      { role: "B", roleLabel: "B (친구)", kr: "그래, 천재야. 그럼 네 차 위에 왜 공룡이 있어?", en: "Okay, genius. Then why is there a dinosaur on your car?", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "이구아나야. 그것도 보험 되나요?", en: "Iguana. Is that covered?", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "종합 보험 없이는 안 되죠.", en: "Not without full coverage.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "마음 바꾸기엔 너무 늦었나요?", en: "Is it too late to change my mind?", note: "" },
+      { role: "B", roleLabel: "B (직원)", kr: "아, 그럼 저야 좋죠.", en: "Oh, I'd love that.", note: "" }
+    ],
+    extras: [
+      { kr: "제 신용카드로 보장되나요?", en: "Does my credit card cover it?" },
+      { kr: "이미 보험 있어요.", en: "I'm already covered." },
+      { kr: "보험은 뭘 보장해요?", en: "What does the insurance cover?" },
+      { kr: "보증금이 있나요?", en: "Is there a deposit?" },
+      { kr: "기름을 가득 채워서 반납해야 하나요?", en: "Do I need to return it with a full tank?" },
+      { kr: "운전자를 한 명 추가할 수 있나요?", en: "Can I add a second driver?" },
+      { kr: "차는 어디에 반납해요?", en: "Where do I return the car?" },
+      { kr: "출발 전에 흠집 있는 곳 좀 보여 주시겠어요?", en: "Could you show me the scratches before I leave?" }
+    ]
+  },
+  {
+    id: 72,
+    title: "먼저 가세요.",
+    category: "호텔 입구 · 문 앞에서 양보하기",
+    page: "p.198-201",
+    tip: "After you는 문 앞뿐 아니라 줄 설 때, 엘리베이터 탈 때, 뷔페에서 음식 담을 때도 쓰는 “먼저 하세요”예요. 누가 양보해 주면 “Thank you.” 하고 바로 지나가면 돼요. “Age before beauty.”는 친한 사이에서만 쓰는 농담이라 조심하세요.",
+    dialogues: [
+      { role: "A", roleLabel: "A (손님)", kr: "먼저 가세요. / 먼저 하세요.", en: "After you.", note: "핵심 표현" },
+      { role: "A", roleLabel: "A (손님)", kr: "먼저 가세요.", en: "Please, go ahead.", note: "핵심 표현" },
+      { role: "A", roleLabel: "A (손님)", kr: "먼저 가세요.", en: "After you.", note: "" },
+      { role: "B", roleLabel: "B (할아버지)", kr: "아니, 아니에요. 아가씨 먼저 가요.", en: "Oh no, no. After you, young lady.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "먼저 가세요.", en: "Please, go ahead.", note: "" },
+      { role: "B", roleLabel: "B (할아버지)", kr: "정말 괜찮아요, 먼저 가요.", en: "I insist.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "아니에요, 정말 먼저 가세요.", en: "No, I insist.", note: "" },
+      { role: "B", roleLabel: "B (할아버지)", kr: "여성분 먼저예요. 제 고향에선 그게 규칙이에요.", en: "Ladies first. That's the rule where I come from.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "손님 먼저예요. 제 고향에선 그게 규칙이에요.", en: "Guests first. That's the rule where I come from.", note: "" },
+      { role: "B", roleLabel: "B (할아버지)", kr: "글쎄요, 전 먼저 안 가요.", en: "Well, I'm not going first.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "저도요.", en: "Neither am I.", note: "" },
+      { role: "B", roleLabel: "B (친구)", kr: "팽팽한 대치 상황이네. 3분. 우리 여기서 3분째야.", en: "It's a standoff. Three minutes. We've been here three minutes.", note: "" },
+      { role: "B", roleLabel: "B (친구)", kr: "좋아. 새로운 계획. 둘이 동시에 지나가요. 셋 하면 가요. 하나, 둘, 셋!", en: "Okay. New plan. You both go at the same time. On three. One, two, three!", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "이게 다 할아버지 탓이에요.", en: "This is your fault.", note: "" },
+      { role: "B", roleLabel: "B (할아버지)", kr: "난 예의 바르게 자랐을 뿐이에요.", en: "I was raised with manners.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "그럼 연장자 먼저요.", en: "Age before beauty, then.", note: "" },
+      { role: "B", roleLabel: "B (친구)", kr: "하나! 그런 말 하면 안 돼!", en: "Hana! You can't say that!", note: "" },
+      { role: "B", roleLabel: "B (할아버지)", kr: "맞는 말이에요, 내가 나이가 많죠. 먼저 지나갈게요. 드디어.", en: "She's right, I'm old. Let me through. Finally.", note: "" },
+      { role: "B", roleLabel: "B (할아버지)", kr: "문 잡았어요! 먼저 가요, 다들 먼저 가요.", en: "Hold the door! After you, after you, everybody.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "감사합니다. 정말 친절하세요.", en: "Thank you, sir. You're very kind.", note: "" },
+      { role: "B", roleLabel: "B (할아버지)", kr: "남부식 환대예요, 아가씨. 편하게 하세요. 진심이에요. 제 호텔에 오신 걸 환영해요.", en: "Southern hospitality, young lady. Be my guest. And I do mean that. Welcome to my hotel.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "할아버지 호텔이에요?", en: "Your hotel?", note: "" },
+      { role: "B", roleLabel: "B (할아버지)", kr: "1982년에 지었죠.", en: "Built it in 1982.", note: "" },
+      { role: "B", roleLabel: "B (친구)", kr: "호텔 주인을 5분 동안 밖에 세워 둔 거야.", en: "You made the owner stand outside for five minutes.", note: "" },
+      { role: "B", roleLabel: "B (할아버지)", kr: "이번 주 최고의 5분이었어요.", en: "Best five minutes I've had all week.", note: "" }
+    ],
+    extras: [
+      { kr: "문 잡아 주셔서 감사해요.", en: "Thanks for holding the door." },
+      { kr: "문 열어 드릴게요.", en: "Let me get the door for you." },
+      { kr: "먼저 하세요, 저 안 급해요.", en: "Go ahead, I'm not in a hurry." },
+      { kr: "죄송한데 좀 지나갈게요.", en: "Excuse me, could I get by?" },
+      { kr: "줄 서신 거예요?", en: "Are you in line?" },
+      { kr: "먼저 오셨잖아요.", en: "You were here first." },
+      { kr: "먼저 타세요. 저는 다음 엘리베이터 탈게요.", en: "After you. I'll take the next elevator." },
+      { kr: "발밑 조심하세요.", en: "Watch your step." }
+    ]
+  },
+  {
+    id: 73,
+    title: "팁 포함인 줄 모르고 두 번 냈다.",
+    category: "식당 · 계산서와 팁",
+    page: "p.202-203",
+    tip: "미국 식당은 보통 15~20%를 팁으로 내요. 그런데 단체 손님이나 관광지 식당은 계산서에 팁(gratuity, service charge)이 이미 포함된 경우가 있어요. 화면의 팁 버튼을 누르기 전에 “Is the tip included?”라고 먼저 물어보세요.",
+    dialogues: [
+      { role: "A", roleLabel: "A (손님)", kr: "팁이 포함된 건가요?", en: "Is the tip included?", note: "핵심 표현" },
+      { role: "B", roleLabel: "B (서버)", kr: "계산서 여기 있어요.", en: "Here's your check.", note: "" },
+      { role: "B", roleLabel: "B (서버)", kr: "팁 25%요. 감사합니다!", en: "25% tip. Thank you!", note: "" },
+      { role: "B", roleLabel: "B (친구)", kr: "하나. 잠깐만.", en: "Hana. Wait.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "팁이 포함된 건가요?", en: "Is the tip included?", note: "" },
+      { role: "B", roleLabel: "B (서버)", kr: "네. 팁이 이미 포함되어 있어요.", en: "Yes. The tip is already included.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "그럼 제가 팁을 두 번 낸 거예요?", en: "So I tipped twice?", note: "" },
+      { role: "B", roleLabel: "B (서버)", kr: "네, 그러셨어요. 걱정 마세요. 바로잡아 드릴게요.", en: "You did. Don't worry. I'll fix it for you.", note: "" },
+      { role: "B", roleLabel: "B (서버)", kr: "다 됐어요. 팁 취소됐어요.", en: "All done. Your tip is canceled.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "정말요? 정말 감사해요.", en: "Really? Thank you so much.", note: "" },
+      { role: "B", roleLabel: "B (서버)", kr: "별말씀을요.", en: "No problem.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "이건 당신 거예요. 거스름돈은 가지세요.", en: "This is for you. Keep the change.", note: "" },
+      { role: "B", roleLabel: "B (친구)", kr: "이번엔 일부러 팁을 주시네요.", en: "Now you're tipping on purpose.", note: "" }
+    ],
+    extras: [
+      { kr: "봉사료가 포함되어 있나요?", en: "Is service charge included?" },
+      { kr: "팁은 얼마나 줘야 해요?", en: "How much should I tip?" },
+      { kr: "팁 금액을 직접 정할 수 있나요?", en: "Can I leave a custom tip?" },
+      { kr: "계산서 다시 확인해 주시겠어요?", en: "Could you check the bill again?" },
+      { kr: "두 번 결제된 것 같아요.", en: "I think I was charged twice." },
+      { kr: "현금으로 내도 될까요?", en: "Can I pay in cash?" },
+      { kr: "따로 계산할 수 있을까요?", en: "Could we split the check?" },
+      { kr: "영수증 주시겠어요?", en: "Could I get a receipt?" }
+    ]
+  },
+  {
+    id: 74,
+    title: "할인 적용이 안 됐어요.",
+    category: "옷가게 · 계산 금액 확인",
+    page: "p.204-206",
+    tip: "“I don't think ~”로 말하면 상대를 탓하지 않고 부드럽게 말할 수 있어요. 미국 가게는 할인이 자동으로 안 들어가는 경우가 꽤 있으니 금액이 이상하면 꼭 확인하세요. 앱이나 회원 가입을 하면 그 자리에서 할인해 주는 곳도 많아요.",
+    dialogues: [
+      { role: "A", roleLabel: "A (손님)", kr: "할인이 적용 안 된 것 같아요.", en: "I don't think the discount was applied.", note: "핵심 표현" },
+      { role: "B", roleLabel: "B (점원)", kr: "총 120달러입니다.", en: "Your total is $120.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "120달러요? 밖에 표지판에 30% 할인이라고 써 있는데.", en: "$120? The sign outside says 30% off.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "저기요. 할인이 적용 안 된 것 같아요.", en: "Excuse me. I don't think the discount was applied.", note: "" },
+      { role: "B", roleLabel: "B (점원)", kr: "아! 확인해 볼게요. 아. 그 할인은 내일부터예요.", en: "Oh! Let me check. Ah. That sale starts tomorrow.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "내일이요? 그럼 내일 다시 올게요.", en: "Tomorrow? Then I'll come back tomorrow.", note: "" },
+      { role: "B", roleLabel: "B (점원)", kr: "잠깐, 잠깐만요. 다른 방법이 있어요. 오늘 저희 앱에 가입하시면 지금 바로 30% 할인돼요.", en: "Wait, wait, wait. There's another way. If you join our app today, you get 30% off right now.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "지금 바로요? 좋아요. 가입할게요. 전화번호를 달래.", en: "Right now? Okay. I'm joining. It's asking for a phone number.", note: "" },
+      { role: "B", roleLabel: "B (친구)", kr: "내 거 써.", en: "Just use mine.", note: "" },
+      { role: "B", roleLabel: "B (점원)", kr: "좋아요. 할인 적용됐어요. 총 84달러입니다.", en: "Perfect. Discount applied. Your new total is $84.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "84달러요? 한 번만 더 확인해 주시겠어요?", en: "$84? Could you check it one more time?", note: "" },
+      { role: "B", roleLabel: "B (점원)", kr: "제대로 들어갔어요. 정말이에요.", en: "It went through. I promise.", note: "" },
+      { role: "B", roleLabel: "B (친구)", kr: "얘 이제 아무도 안 믿어요. 팁 사건 이후로는요.", en: "She doesn't trust anyone anymore. Not since the tip.", note: "" },
+      { role: "B", roleLabel: "B (점원)", kr: "그리고 신규 회원은 에코백도 무료예요.", en: "And new members get a free tote bag.", note: "" },
+      { role: "A", roleLabel: "A (손님)", kr: "무료요? 이제 얘 내일도 올 거예요. 할인 때문에.", en: "Free? Now she's going to come back tomorrow too. For the sale.", note: "" }
+    ],
+    extras: [
+      { kr: "이거 30% 할인 아니에요?", en: "Isn't this 30% off?" },
+      { kr: "가격표에는 40달러라고 써 있어요.", en: "The price tag says $40." },
+      { kr: "쿠폰 있나요?", en: "Do you have any coupons?" },
+      { kr: "이것도 할인돼요?", en: "Is this on sale too?" },
+      { kr: "할인은 언제까지예요?", en: "When does the sale end?" },
+      { kr: "회원 할인 있나요?", en: "Is there a member discount?" },
+      { kr: "가격 다시 확인해 주시겠어요?", en: "Could you check the price again?" },
+      { kr: "차액은 환불받을 수 있나요?", en: "Can I get a refund for the difference?" }
+    ]
   }
 ];
